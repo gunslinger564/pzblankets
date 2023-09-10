@@ -1,0 +1,35 @@
+module Blankets{
+
+	item BlackBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Black Blanket,
+	Weight = 1,
+	}
+	
+	item PinkBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Pink Blanket,
+	Weight = 1,
+	}
+	
+	item BlueBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Blue Blanket,
+	Weight = 1,
+	}
+
+	item GreenBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Green Blanket,
+	Weight = 1,
+	}
+
+}

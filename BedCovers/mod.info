@@ -1,0 +1,6 @@
+name=Blankets for beds
+poster=poster.png
+id=blankets
+description=Adds covers to all bedding
+pack=guns_bedcovers_
+tiledef=guns_bedcovers_tiledefinitions 666
