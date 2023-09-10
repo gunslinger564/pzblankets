@@ -5,7 +5,7 @@ if getActivatedMods():contains("TMC_TrueActions") then
         local t = TA_WO_List["furniture_bedding_01_"..i]
         if t ~= nil then
             --TODO definitions loop
-            for _,name in ipairs({"bedding_black","bedding_pastelPink"}) do
+            for _,name in ipairs({"bedding_black","bedding_pastelPink","bedding_lightBlue","bedding_lightGreen"}) do
                 TA_WO_List[name.."_"..i] = t
             end
         end
