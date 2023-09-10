@@ -1,4 +1,4 @@
 ContextMenu_EN = {
-    ContextMenu_BO_PlaceBedSheet = "Place Bed Sheet",
+    ContextMenu_BO_PlaceBedSheet = "Place bed sheet (%1)",
     ContextMenu_BO_RemoveBedSheet = "Remove bed sheet",
 }

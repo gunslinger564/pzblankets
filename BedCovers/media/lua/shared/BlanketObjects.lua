@@ -1,4 +1,5 @@
-local BO = BlanketObjects or {}
+BlanketObjects = BlanketObjects or {}
+
 --[[--
 BO.vGridTiles = {
 	furniture_bedding_01_0 = {0,1}
@@ -184,5 +185,9 @@ BO.cGridTiles = {
 	bedding_black_87 = {1,0}
 }--]]
 
-
-BlanketObjects = BO
+BlanketObjects.TilesInfo = {
+    ["Blankets.BlackBlanket"] = "bedding_black",
+    ["Blankets.PinkBlanket"] = "bedding_pastelPink",
+    ["Blankets.BlueBlanket"] = "bedding_lightBlue",
+    ["Blankets.GreenBlanket"] = "bedding_lightgreen",
+}
