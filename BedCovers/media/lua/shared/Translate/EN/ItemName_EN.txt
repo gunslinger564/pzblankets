@@ -1,0 +1,6 @@
+ItemName_EN = {
+    ItemName_Blankets.BlackBlanket = "Black Blanket",
+    ItemName_Blankets.PinkBlanket = "Pink Blanket",
+    ItemName_Blankets.BlueBlanket = "Blue Blanket",
+    ItemName_Blankets.GreenBlanket = "Green Blanket",
+}

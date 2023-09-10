@@ -1,12 +1,12 @@
 if getActivatedMods():contains("TMC_TrueActions") then
     require "TrueActionsSetting"
+    local TileInfo = BlanketObjects.TilesInfo
     local TA_WO_List = TrueActions.WorldLieObject
-    for i = 0, 84 do
+    for i = 0, 83 do
         local t = TA_WO_List["furniture_bedding_01_"..i]
         if t ~= nil then
-            --TODO definitions loop
-            for _,name in ipairs({"bedding_black","bedding_pastelPink","bedding_lightBlue","bedding_lightGreen"}) do
-                TA_WO_List[name.."_"..i] = t
+            for _,tileset in pairs(TileInfo) do
+                TA_WO_List[tileset.."_"..i] = t
             end
         end
     end
