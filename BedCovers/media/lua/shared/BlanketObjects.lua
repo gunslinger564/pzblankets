@@ -1,4 +1,4 @@
-BlanketObjects = BlanketObjects or {}
+BlanketObjects = {}
 
 --[[--
 BO.vGridTiles = {
@@ -192,3 +192,13 @@ BlanketObjects.TilesInfo = {
     ["Blankets.GreenBlanket"] = "bedding_lightgreen",
     ["Blankets.GreyBlanket"] = "bedding_grey",
 }
+
+BlanketObjects.IgnoreTileList = {}
+for i = 36, 39 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
+for i = 56, 59 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
+for i = 84, 87 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
+
+BlanketObjects.ItemTypes = {}
+for k,_ in pairs(BlanketObjects.TilesInfo) do
+	table.insert(BlanketObjects.ItemTypes,k)
+end

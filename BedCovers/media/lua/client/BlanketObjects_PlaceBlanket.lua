@@ -44,7 +44,7 @@ function BO.OnPreFillWorldObjectContextMenu(player, context, worldobjects, test)
 	if bed ~= nil then
         local character = getSpecificPlayer(player)
         local bed_tileset = bed:getTextureName():gsub("_%d+$","")
-		if bed_tileset == "furniture_bedding_01" then
+		if bed_tileset == "furniture_bedding_01" and not BO.IgnoreTileList[bed:getTextureName()] then
             local inventory = character:getInventory()
             for item,tileset in pairs(BO.TilesInfo) do
                 local bedSheet = inventory:getFirstType(item)
