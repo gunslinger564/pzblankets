@@ -97,7 +97,7 @@ module Blankets
         Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
-/**
+
     recipe Tear Blanket
     {
 	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket
@@ -107,7 +107,7 @@ module Blankets
 	Time:100,
         Sound:ClothesRipping,
         Category:Survivalist,
-	OnCreate:Rip.Blanket.Oncreate,
+	OnCreate:RipBlanket.Oncreate,
     }
-**\	
+
 }
