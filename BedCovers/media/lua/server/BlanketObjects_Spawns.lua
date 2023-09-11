@@ -47,7 +47,7 @@ function Spawns.OnNewWithSprite(isoObject)
 
     local randItem = BlanketObjects.ItemTypes[ZombRand(#BlanketObjects.ItemTypes)+1]
     if not TSL or rand < Spawns.Settings.chanceCoversItem then
-        isoObject:getSquare():AddWorldInventoryItem(randItem, 0.6, 0.6, 0.16)
+        isoObject:getSquare():AddWorldInventoryItem(randItem, 0.5, 0.5, (isoObject:getProperties():Val("Surface") or 32) / 100 )
     else
         local grid = isoObject:getSprite():getSpriteGrid()
         for x = isoObject:getX(), isoObject:getX() + grid:getWidth()-1 do
@@ -56,7 +56,7 @@ function Spawns.OnNewWithSprite(isoObject)
                 if sq ~= nil then
                     Spawns.SquareLoaded(sq,BlanketObjects.TilesInfo[randItem])
                 else
-                    TSL.instance.addCommand(x,y,isoObject:getZ(), { command = "setBedCovers", tileset = BlanketObjects.TilesInfo[randItem] })
+                    TSL.addCommand(x,y,isoObject:getZ(), { command = "setBedCovers", tileset = BlanketObjects.TilesInfo[randItem] })
                 end
             end
         end
@@ -72,11 +72,12 @@ function Spawns.OnLoadWithSprite(isoObject)
         isoObject:getModData().spawnedBlanket = true
         isoObject:transmitModData()
         local randItem = BlanketObjects.ItemTypes[ZombRand(#BlanketObjects.ItemTypes)+1]
-        isoObject:getSquare():AddWorldInventoryItem(randItem, 0.6, 0.6, 0.16)
+        isoObject:getSquare():AddWorldInventoryItem(randItem, 0.5, 0.5, (isoObject:getProperties():Val("Surface") or 32) / 100 )
     end
 end
 
-function Spawns.OnLoadedTileDefinitions()
+---@param manager IsoSpriteManager
+function Spawns.OnLoadedTileDefinitions(manager)
     local ignore = BlanketObjects.IgnoreTileList or {}
     local addOnLoad = Spawns.Settings.BlanketCoversExtra_End > Calendar.getInstance():getTimeInMillis()
 
