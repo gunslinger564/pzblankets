@@ -100,7 +100,7 @@ module Blankets
 
     recipe Tear Blanket
     {
-	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket
+	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket,
         RemoveResultItem:true,
 	AnimNode:RipSheets,
 	Result:RippedSheets,
