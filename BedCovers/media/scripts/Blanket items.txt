@@ -2,6 +2,7 @@ module Blankets{
 
 	item BlackBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Black Blanket,
@@ -11,6 +12,7 @@ module Blankets{
 	
 	item PinkBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Pink Blanket,
@@ -20,6 +22,7 @@ module Blankets{
 	
 	item BlueBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Blue Blanket,
@@ -29,6 +32,7 @@ module Blankets{
 
 	item GreenBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Green Blanket,
@@ -38,6 +42,7 @@ module Blankets{
 
 	item RedBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Red Blanket,
@@ -47,6 +52,7 @@ module Blankets{
 
 	item YellowBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Red Blanket,
@@ -56,6 +62,7 @@ module Blankets{
 
 	item PurpleBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type 		= Normal,
 	DisplayName	=  Purple Blanket,
@@ -65,6 +72,7 @@ module Blankets{
 
 	item GreyBlanket
 	{ 
+	DisplayCategory = Household,
 	Weight 		= 1,
 	Type		= Normal,
 	DisplayName	=  Grey Blanket,
