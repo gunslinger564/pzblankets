@@ -190,4 +190,5 @@ BlanketObjects.TilesInfo = {
     ["Blankets.PinkBlanket"] = "bedding_pastelPink",
     ["Blankets.BlueBlanket"] = "bedding_lightBlue",
     ["Blankets.GreenBlanket"] = "bedding_lightgreen",
+    ["Blankets.GreyBlanket"] = "bedding_grey",
 }
