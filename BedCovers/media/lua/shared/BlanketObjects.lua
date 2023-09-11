@@ -189,8 +189,11 @@ BlanketObjects.TilesInfo = {
     ["Blankets.BlackBlanket"] = "bedding_black",
     ["Blankets.PinkBlanket"] = "bedding_pastelPink",
     ["Blankets.BlueBlanket"] = "bedding_lightBlue",
-    ["Blankets.GreenBlanket"] = "bedding_lightgreen",
+    ["Blankets.GreenBlanket"] = "bedding_lightGreen",
     ["Blankets.GreyBlanket"] = "bedding_grey",
+    ["Blankets.RedBlanket"] = "bedding_red",
+    ["Blankets.YellowBlanket"] = "bedding_yellow",
+    ["Blankets.PurpleBlanket"] = "bedding_purple",
 }
 
 BlanketObjects.IgnoreTileList = {}
