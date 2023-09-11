@@ -1,13 +1,18 @@
 module Blankets
 {
-	
-	recipe Sew Black Blanket
-	keep Needle/SutureNeedle,
-	Sheet=2,
-	HairDyeBlack=2,
-	Thread=5,
-	SkillRequired:Tailoring=2,
-	Result:BlackBlanket,
+
+    recipe Sew Black Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+        Sheet=2,
+        HairDyeBlack=2,
+        Thread=5,
+        Result:BlackBlanket,
+        SkillRequired:Tailoring=2,
+        Time:150,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
 
 	recipe Sew Pink Blanket
 	keep Needle/SutureNeedle,
