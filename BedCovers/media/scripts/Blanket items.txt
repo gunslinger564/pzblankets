@@ -6,6 +6,7 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Black Blanket,
 	Weight = 1,
+	Icon = BlackBlanket,
 	}
 	
 	item PinkBlanket
@@ -14,6 +15,7 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Pink Blanket,
 	Weight = 1,
+	Icon = PinkBlanket,
 	}
 	
 	item BlueBlanket
@@ -22,6 +24,7 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Blue Blanket,
 	Weight = 1,
+	Icon = BlueBlanket,
 	}
 
 	item GreenBlanket
@@ -30,6 +33,7 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Green Blanket,
 	Weight = 1,
+	Icon = GreenBlanket,
 	}
 
 }
