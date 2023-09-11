@@ -7,6 +7,7 @@ module Blankets{
 	DisplayName	=  Black Blanket,
 	Weight = 1,
 	Icon = BlackBlanket,
+	WorldStaticModel = BlanketBlack,
 	}
 	
 	item PinkBlanket
@@ -16,6 +17,7 @@ module Blankets{
 	DisplayName	=  Pink Blanket,
 	Weight = 1,
 	Icon = PinkBlanket,
+	WorldStaticModel = BlanketPink,
 	}
 	
 	item BlueBlanket
@@ -25,6 +27,7 @@ module Blankets{
 	DisplayName	=  Blue Blanket,
 	Weight = 1,
 	Icon = BlueBlanket,
+	WorldStaticModel = BlanketBlue,
 	}
 
 	item GreenBlanket
@@ -34,6 +37,37 @@ module Blankets{
 	DisplayName	=  Green Blanket,
 	Weight = 1,
 	Icon = GreenBlanket,
+	WorldStaticModel = BlanketGreen,
+	}
+
+	item RedBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Red Blanket,
+	Weight = 1,
+	Icon = RedBlanket,
+	WorldStaticModel = BlanketRed,
+	}
+
+	item YellowBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Red Blanket,
+	Weight = 1,
+	Icon = YellowBlanket,
+	WorldStaticModel = BlanketYellow,
+	}
+
+	item PurpleBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Purple Blanket,
+	Weight = 1,
+	Icon = YellowBlanket,
+	WorldStaticModel = BlanketPurple,
 	}
 
 	item GreyBlanket
@@ -42,7 +76,8 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Grey Blanket,
 	Weight = 1,
-	Icon = GreyBlanket,
+	Icon = YellowBlanket,
+	WorldStaticModel = BlanketGrey,
 	}
 
 }

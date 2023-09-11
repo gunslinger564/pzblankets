@@ -1,0 +1,52 @@
+module Blankets{
+ model BlanketBlue
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketBlue,
+	scale = .15,
+	}
+ model BlanketGrey
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketGrey,
+	scale = .15,
+	}
+ model BlanketBlack
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketBlack,
+	scale = .15,
+	}
+ model BlanketPink
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketPink,
+	scale = .15,
+	}
+ model BlanketGreen
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketGreen,
+	scale = .15,
+	}
+ model BlanketRed
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketRed,
+	scale = .15,
+	}
+ model BlanketPurple
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketPurple,
+	scale = .15,
+	}
+ model BlanketYellow
+	{
+	mesh = WorldItems/Sheet,
+	texture = blanketYellow,
+	scale = .15,
+	}
+
+
+}
