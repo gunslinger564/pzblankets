@@ -6,14 +6,14 @@ module Blankets
 	Sheet=2,
 	HairDyeBlack=2,
 	Thread=5,
-	result:BlackBlanket,
+	Result:BlackBlanket,
 
 	recipe Sew Pink Blanket
 	keep Needle/SutureNeedle,
 	Sheet=2,
 	HairDyePink=2,
 	Thread=5,
-	result:PinkBlanket,
+	Result:PinkBlanket,
 
 	recipe Sew Grey Blanket
 	keep Needle/SutureNeedle,
@@ -21,35 +21,35 @@ module Blankets
 	HairDyeBlack,
 	HairDyeWhite,
 	Thread=5,
-	result:GreyBlanket,
+	Result:GreyBlanket,
 
 	recipe Sew Blue Blanket
 	keep Needle/SutureNeedle,
 	Sheet=2,
 	HairDyeBlue=2,
 	Thread=5,
-	result:BlueBlanket,
+	Result:BlueBlanket,
 
 	recipe Sew Green Blanket
 	keep Needle/SutureNeedle,
 	Sheet=2,
 	HairDyeGreen=2,
 	Thread=5,
-	result:GreenBlanket,
+	Result:GreenBlanket,
 
 	recipe Sew Red Blanket
 	keep Needle/SutureNeedle,
 	Sheet=2,
 	HairDyeRed=2,
 	Thread=5,
-	result:RedBlanket,
+	Result:RedBlanket,
 
 	recipe Sew Yellow Blanket
 	keep Needle/SutureNeedle,
 	Sheet=2,
 	HairDyeYellow=2,
 	Thread=5,
-	result:YellowBlanket,
+	Result:YellowBlanket,
 
 	recipe Sew Purple Blanket
 	keep Needle/SutureNeedle,
@@ -57,6 +57,6 @@ module Blankets
 	HairDyeBlue,
 	HairDyeRed,
 	Thread=5,
-	result:PurpleBlanket,
+	Result:PurpleBlanket,
 
 }
