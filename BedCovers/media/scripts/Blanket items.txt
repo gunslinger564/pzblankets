@@ -36,4 +36,13 @@ module Blankets{
 	Icon = GreenBlanket,
 	}
 
+	item GreyBlanket
+	{ 
+	Weight = 1,
+	Type = Normal,
+	DisplayName	=  Grey Blanket,
+	Weight = 1,
+	Icon = GreyBlanket,
+	}
+
 }
