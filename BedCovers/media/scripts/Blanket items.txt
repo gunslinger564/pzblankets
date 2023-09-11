@@ -66,7 +66,7 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Purple Blanket,
 	Weight = 1,
-	Icon = YellowBlanket,
+	Icon = PurpleBlanket,
 	WorldStaticModel = BlanketPurple,
 	}
 
@@ -76,7 +76,7 @@ module Blankets{
 	Type = Normal,
 	DisplayName	=  Grey Blanket,
 	Weight = 1,
-	Icon = YellowBlanket,
+	Icon = GreyBlanket,
 	WorldStaticModel = BlanketGrey,
 	}
 
