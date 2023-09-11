@@ -14,62 +14,94 @@ module Blankets
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
 
-	recipe Sew Pink Blanket
-	keep Needle/SutureNeedle,
+    recipe Sew Pink Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyePink=2,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:PinkBlanket,
-
-	recipe Sew Grey Blanket
-	keep Needle/SutureNeedle,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
+	
+    recipe Sew Grey Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyeBlack,
 	HairDyeWhite,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:GreyBlanket,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
 
-	recipe Sew Blue Blanket
-	keep Needle/SutureNeedle,
+    recipe Sew Blue Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyeBlue=2,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:BlueBlanket,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
 
-	recipe Sew Green Blanket
-	keep Needle/SutureNeedle,
+    recipe Sew Green Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyeGreen=2,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:GreenBlanket,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
 
-	recipe Sew Red Blanket
-	keep Needle/SutureNeedle,
+    recipe Sew Red Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyeRed=2,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:RedBlanket,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
 
-	recipe Sew Yellow Blanket
-	keep Needle/SutureNeedle,
+    recipe Sew Yellow Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyeYellow=2,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:YellowBlanket,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
 
-	recipe Sew Purple Blanket
-	keep Needle/SutureNeedle,
+    recipe Sew Purple Blanket
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	Sheet=2,
 	HairDyeBlue,
 	HairDyeRed,
 	Thread=5,
+	Time:100,
 	SkillRequired:Tailoring=2,
-	Result:PurpleBlanket,
-
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+    }
+/**
+    recipe Tear Blanket
+    {
+	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket
+        RemoveResultItem:true,
+	AnimNode:RipSheets,
+	Result:RippedSheets,
+	Time:100,
+        Sound:ClothesRipping,
+	OnCreate:Rip.Blanket.Oncreate,
+    }
+**\	
 }
