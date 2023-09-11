@@ -3,4 +3,4 @@ poster=poster.png
 id=blankets
 description=Makes beds have blankets that can be removed and crafted
 pack=guns_bedcovers_
-tiledef=guns_bedcovers_tiledefinitions 666
+tiledef=guns_bedcovers_tiledefinitions 670
