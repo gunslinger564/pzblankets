@@ -22,6 +22,7 @@ module Blankets
 	Thread=5,
 	Time:100,
 	SkillRequired:Tailoring=2,
+        Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
 	
@@ -34,6 +35,7 @@ module Blankets
 	Thread=5,
 	Time:100,
 	SkillRequired:Tailoring=2,
+        Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
 
@@ -45,6 +47,7 @@ module Blankets
 	Thread=5,
 	Time:100,
 	SkillRequired:Tailoring=2,
+        Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
 
@@ -67,6 +70,7 @@ module Blankets
 	Thread=5,
 	Time:100,
 	SkillRequired:Tailoring=2,
+        Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
 
@@ -90,6 +94,7 @@ module Blankets
 	Thread=5,
 	Time:100,
 	SkillRequired:Tailoring=2,
+        Category:Survivalist,
         OnGiveXP:Recipe.OnGiveXP.Tailoring3,
     }
 /**
@@ -101,6 +106,7 @@ module Blankets
 	Result:RippedSheets,
 	Time:100,
         Sound:ClothesRipping,
+        Category:Survivalist,
 	OnCreate:Rip.Blanket.Oncreate,
     }
 **\	
