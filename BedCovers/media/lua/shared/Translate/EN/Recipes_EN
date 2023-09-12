@@ -1,0 +1,11 @@
+Recipes_En = {
+  Recipe_Sew_Black_Blanket = "Sew Black Blanket",
+  Recipe_Sew_Pink_Blanket = "Sew Pink Blanket",
+  Recipe_Sew_Grey_Blanket = "Sew Grey Blanket",
+  Recipe_Sew_Blue_Blanket = "Sew Blue Blanket",
+  Recipe_Sew_Green_Blanket = "Sew Green Blanket",
+  Recipe_Sew_Red_Blanket = "Sew Red Blanket",
+  Recipe_Sew_Yellow_Blanket = "Sew Yellow Blanket",
+  Recipe_Sew_Purple_Blanket = "Sew Purple Blanket",
+  Recipe_Tear_Blanket = "Tear Blanket",
+}
