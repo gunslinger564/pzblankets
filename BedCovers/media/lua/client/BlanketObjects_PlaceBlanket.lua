@@ -16,14 +16,13 @@ function BO.placeBedSheet(character,bed,bedSheet,tileset)
 end
 
 function BO.removeBedSheet(character,bed,tileset,item)
-	local bed_tileset = bed:getTextureName():gsub("_%d+$","")
-	if bed_tileset ~= tileset then return end
+	if bed:getTextureName():find(tileset) ~= nil then return end
 
 	local objects = ArrayList.new()
 	bed:getSpriteGridObjects(objects)
 	for i = 0, objects:size()- 1 do
 		local obj = objects:get(i)
-        obj:setSprite(getSprite(obj:getTextureName():gsub(bed_tileset,"furniture_bedding_01",1)))
+        obj:setSprite(getSprite((obj:getTextureName():gsub(tileset,"furniture_bedding_01",1))))
 		obj:transmitUpdatedSpriteToServer()
 	end
 	character:getInventory():AddItem(item)
