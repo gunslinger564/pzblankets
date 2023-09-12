@@ -1,0 +1,4 @@
+ContextMenu_ES = {
+    ContextMenu_BO_PlaceBedSheet = "Colocar sábana (%1)",
+    ContextMenu_BO_RemoveBedSheet = "Quitar la sábana",
+}

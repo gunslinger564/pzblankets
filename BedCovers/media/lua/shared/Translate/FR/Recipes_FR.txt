@@ -1,0 +1,11 @@
+Recipes_FR = {
+  Recipe_Sew_Black_Blanket = "Coudre une couverture noire",
+  Recipe_Sew_Pink_Blanket = "Coudre une couverture rose",
+  Recipe_Sew_Grey_Blanket = "Coudre une couverture grise",
+  Recipe_Sew_Blue_Blanket = "Coudre une couverture bleue",
+  Recipe_Sew_Green_Blanket = "Coudre une couverture verte",
+  Recipe_Sew_Red_Blanket = "Coudre une couverture rouge",
+  Recipe_Sew_Yellow_Blanket = "Coudre une couverture jaune",
+  Recipe_Sew_Purple_Blanket = "Coudre une couverture violette",
+  Recipe_Rip_Blanket = "Couverture déchirée",
+}

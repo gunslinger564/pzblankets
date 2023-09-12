@@ -1,0 +1,11 @@
+Recipes_UA = {
+  Recipe_Sew_Black_Blanket = "Зшийте чорну ковдру",
+  Recipe_Sew_Pink_Blanket = "Зшийте рожеву ковдру",
+  Recipe_Sew_Grey_Blanket = "Зшити сіру ковдру",
+  Recipe_Sew_Blue_Blanket = "Зшийте синю ковдру",
+  Recipe_Sew_Green_Blanket = "Зшийте зелену ковдру",
+  Recipe_Sew_Red_Blanket = "Зшийте червону ковдру",
+  Recipe_Sew_Yellow_Blanket = "Зшийте жовту ковдру",
+  Recipe_Sew_Purple_Blanket = "Зшийте фіолетову ковдру",
+  Recipe_Rip_Blanket = "Ковдра Rip",
+}

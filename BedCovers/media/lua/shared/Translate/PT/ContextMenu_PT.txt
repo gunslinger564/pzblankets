@@ -1,0 +1,4 @@
+ContextMenu_PT = {
+    ContextMenu_BO_PlaceBedSheet = "Colocar lençol (%1)",
+    ContextMenu_BO_RemoveBedSheet = "Remova o lençol",
+}

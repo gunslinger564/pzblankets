@@ -1,0 +1,11 @@
+Recipes_PT = {
+  Recipe_Sew_Black_Blanket = "Costurar Manta Preta",
+  Recipe_Sew_Pink_Blanket = "Costurar manta rosa",
+  Recipe_Sew_Grey_Blanket = "Costurar manta cinza",
+  Recipe_Sew_Blue_Blanket = "Costurar Manta Azul",
+  Recipe_Sew_Green_Blanket = "Costurar Manta Verde",
+  Recipe_Sew_Red_Blanket = "Costurar Manta Vermelha",
+  Recipe_Sew_Yellow_Blanket = "Costurar Manta Amarela",
+  Recipe_Sew_Purple_Blanket = "Costurar manta roxa",
+  Recipe_Rip_Blanket = "Cobertor rasgado",
+}

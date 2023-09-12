@@ -1,0 +1,11 @@
+Recipes_CN = {
+  Recipe_Sew_Black_Blanket = "缝黑色毯子",
+  Recipe_Sew_Pink_Blanket = "缝粉色毯子",
+  Recipe_Sew_Grey_Blanket = "缝制灰色毯子",
+  Recipe_Sew_Blue_Blanket = "缝蓝色毯子",
+  Recipe_Sew_Green_Blanket = "缝绿色毯子",
+  Recipe_Sew_Red_Blanket = "缝红毯子",
+  Recipe_Sew_Yellow_Blanket = "缝黄色毯子",
+  Recipe_Sew_Purple_Blanket = "缝制紫色毯子",
+  Recipe_Rip_Blanket = "撕裂毯子",
+}

@@ -1,0 +1,4 @@
+ContextMenu_RU = {
+    ContextMenu_BO_PlaceBedSheet = "Разместить простыню (%1)",
+    ContextMenu_BO_RemoveBedSheet = "Убрать простыню",
+}

@@ -1,0 +1,4 @@
+ContextMenu_UA = {
+    ContextMenu_BO_PlaceBedSheet = "Покладіть простирадло (%1)",
+    ContextMenu_BO_RemoveBedSheet = "Зняти простирадло",
+}
