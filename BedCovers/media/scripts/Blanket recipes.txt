@@ -108,7 +108,7 @@ module Blankets
 	Result:PurpleBlanket,
     }
 
-    recipe Tear Blanket
+    recipe Rip Blanket
     {
 	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket,
         RemoveResultItem:true,
