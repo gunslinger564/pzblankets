@@ -1,0 +1,10 @@
+ItemName_CN = {
+    ItemName_Blankets.BlackBlanket = "黑色毯子",
+    ItemName_Blankets.PinkBlanket = "粉色毯子",
+    ItemName_Blankets.BlueBlanket = "蓝色毯子",
+    ItemName_Blankets.GreenBlanket = "绿毯",
+    ItemName_Blankets.RedBlanket = "红毯子",
+    ItemName_Blankets.PurpleBlanket = "紫色毯子",
+    ItemName_Blankets.YellowBlanket = "黄毯子",
+    ItemName_Blankets.GreyBlanket = "灰色毯子",
+}

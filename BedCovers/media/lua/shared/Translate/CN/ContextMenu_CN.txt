@@ -1,0 +1,4 @@
+ContextMenu_CN = {
+    ContextMenu_BO_PlaceBedSheet = "放置床单 (%1)",
+    ContextMenu_BO_RemoveBedSheet = "取下床单",
+}

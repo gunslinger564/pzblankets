@@ -1,0 +1,10 @@
+ItemName_UA = {
+    ItemName_Blankets.BlackBlanket = "Чорна ковдра",
+    ItemName_Blankets.PinkBlanket = "Рожева ковдра",
+    ItemName_Blankets.BlueBlanket = "Синя ковдра",
+    ItemName_Blankets.GreenBlanket = "Зелена ковдра",
+    ItemName_Blankets.RedBlanket = "Червона ковдра",
+    ItemName_Blankets.PurpleBlanket = "Фіолетова ковдра",
+    ItemName_Blankets.YellowBlanket = "Жовта ковдра",
+    ItemName_Blankets.GreyBlanket = "Сіра ковдра",
+}
