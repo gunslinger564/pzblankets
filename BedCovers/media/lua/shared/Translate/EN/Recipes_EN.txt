@@ -1,4 +1,4 @@
-Recipes_En = {
+Recipes_EN = {
   Recipe_Sew_Black_Blanket = "Sew Black Blanket",
   Recipe_Sew_Pink_Blanket = "Sew Pink Blanket",
   Recipe_Sew_Grey_Blanket = "Sew Grey Blanket",
