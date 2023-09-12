@@ -7,5 +7,5 @@ Recipes_EN = {
   Recipe_Sew_Red_Blanket = "Sew Red Blanket",
   Recipe_Sew_Yellow_Blanket = "Sew Yellow Blanket",
   Recipe_Sew_Purple_Blanket = "Sew Purple Blanket",
-  Recipe_Tear_Blanket = "Tear Blanket",
+  Recipe_Rip_Blanket = "Rip Blanket",
 }
