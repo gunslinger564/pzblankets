@@ -1,28 +1,28 @@
 local BO = BlanketObjects
 
 function BO.placeBedSheet(character,bed,bedSheet,tileset)
-	local objects = ArrayList.new()
-	bed:getSpriteGridObjects(objects)
-	-- if objects:size() < bed:getSprite():getSpriteGrid():getSpriteCount() then return player:Say("broken") end --text
-	
-	for i = 0, objects:size()- 1 do
-		local obj = objects:get(i)
+	if character:getInventory():RemoveOneOf(bedSheet,false) then
+		local objects = ArrayList.new()
+		bed:getSpriteGridObjects(objects)
+		-- if objects:size() < bed:getSprite():getSpriteGrid():getSpriteCount() then return player:Say("broken") end --text
+		
+		for i = 0, objects:size()- 1 do
+			local obj = objects:get(i)
 
-        obj:setSprite(getSprite((obj:getTextureName():gsub("furniture_bedding_01",tileset,1))))
-		obj:transmitUpdatedSpriteToServer()
+			obj:setSprite(getSprite((obj:getTextureName():gsub("furniture_bedding_01",tileset,1))))
+			obj:transmitUpdatedSpriteToServer()
+		end
 	end
-	character:getInventory():Remove(bedSheet)
 end
 
 function BO.removeBedSheet(character,bed,tileset,item)
-	local bed_tileset = bed:getTextureName():gsub("_%d+$","")
-	if bed_tileset ~= tileset then return end
+	if bed:getTextureName():find(tileset) ~= nil then return end
 
 	local objects = ArrayList.new()
 	bed:getSpriteGridObjects(objects)
 	for i = 0, objects:size()- 1 do
 		local obj = objects:get(i)
-        obj:setSprite(getSprite(obj:getTextureName():gsub(bed_tileset,"furniture_bedding_01",1)))
+        obj:setSprite(getSprite((obj:getTextureName():gsub(tileset,"furniture_bedding_01",1))))
 		obj:transmitUpdatedSpriteToServer()
 	end
 	character:getInventory():AddItem(item)
@@ -47,9 +47,8 @@ function BO.OnPreFillWorldObjectContextMenu(player, context, worldobjects, test)
 		if bed_tileset == "furniture_bedding_01" and not BO.IgnoreTileList[bed:getTextureName()] then
             local inventory = character:getInventory()
             for item,tileset in pairs(BO.TilesInfo) do
-                local bedSheet = inventory:getFirstType(item)
-                if bedSheet ~= nil then
-                    local optionBed = context:addOption(getText("ContextMenu_BO_PlaceBedSheet",bedSheet:getName()),character,BO.placeBedSheet,bed,bedSheet,tileset)
+                if inventory:containsType(item) then
+                    local optionBed = context:addOption(getText("ContextMenu_BO_PlaceBedSheet",getItemNameFromFullType(item)),character,BO.placeBedSheet,bed,item,tileset)
                 end
             end
 		else
