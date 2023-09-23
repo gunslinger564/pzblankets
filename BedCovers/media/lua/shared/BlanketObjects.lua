@@ -13,7 +13,7 @@ BlanketObjects.TilesInfo = {
 
 for index,val in pairs(BlanketObjects.TilesInfo) do
 	newName = index .. "WithSkulls"
-		BlanketObjects.TextureTilesInfo[newName] = "skull_pattern"
+		BlanketObjects.TextureTilesInfo[newName] = {val,"skull_pattern"}
 end
 
 BlanketObjects.IgnoreTileList = {}
