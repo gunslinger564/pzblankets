@@ -1,25 +1,28 @@
 BlanketObjects = {}
 BlanketObjects.TextureTilesInfo = {}
 BlanketObjects.TilesInfo = {
-    ["Blankets.BlackBlanket"] = "bedding_black",
-    ["Blankets.PinkBlanket"] = "bedding_pastelPink",
-    ["Blankets.BlueBlanket"] = "bedding_lightBlue",
-    ["Blankets.GreenBlanket"] = "bedding_lightGreen",
-    ["Blankets.GreyBlanket"] = "bedding_grey",
-    ["Blankets.RedBlanket"] = "bedding_red",
-    ["Blankets.YellowBlanket"] = "bedding_yellow",
-    ["Blankets.PurpleBlanket"] = "bedding_purple",
+    ["Blankets.BlackBlanket"] = {"bedding_black"},
+    ["Blankets.PinkBlanket"] = {"bedding_pastelPink"},
+    ["Blankets.BlueBlanket"] = {"bedding_lightBlue"},
+    ["Blankets.GreenBlanket"] = {"bedding_lightGreen"},
+    ["Blankets.GreyBlanket"] = {"bedding_grey"},
+    ["Blankets.RedBlanket"] = {"bedding_red"},
+    ["Blankets.YellowBlanket"] = {"bedding_yellow"},
+    ["Blankets.PurpleBlanket"] = {"bedding_purple"},
 }
 
 for index,val in pairs(BlanketObjects.TilesInfo) do
-	newName = index .. "WithSkulls"
-		BlanketObjects.TextureTilesInfo[newName] = {val,"skull_pattern"}
+ newName = index .. "WithSkulls"
+BlanketObjects.TextureTilesInfo[newName] = {val[1],"skull_pattern"}
+end  
+for index,val in pairs(BlanketObjects.TextureTilesInfo) do
+BlanketObjects.TilesInfo[index] = {val[1],val[2]}
 end
-
 BlanketObjects.IgnoreTileList = {}
 for i = 36, 39 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
 for i = 56, 59 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
 for i = 84, 87 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
+
 
 BlanketObjects.ItemTypes = {}
 for k,_ in pairs(BlanketObjects.TilesInfo) do
