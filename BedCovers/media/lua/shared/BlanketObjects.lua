@@ -63,7 +63,7 @@ BlanketObjects.PatternsInfo = {
         sSimple     = "bedding_paws_pattern_32",
 	colourRolls = { None = 1,},
     },
-    None = 0,
+    None = 12,
 }
 
 BlanketObjects.OverlayColours = {
