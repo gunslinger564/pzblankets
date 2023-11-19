@@ -1,5 +1,6 @@
 module Blankets {
 
+
 	item BlackBlanket
 	{ 
 	DisplayCategory = Household,
@@ -96,6 +97,7 @@ module Blankets {
 	DisplayName	=  Military Green Blanket,
 	Icon 		= GreyBlanket,
 	WorldStaticModel = BlanketGrey,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 
 	item DarkBlueBlanket
@@ -106,40 +108,9 @@ module Blankets {
 	DisplayName	=  Dark Blue Blanket,
 	Icon 		= GreyBlanket,
 	WorldStaticModel = BlanketGrey,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 	
-	item BlackBlanketWithSkulls
-	{ 
-	DisplayCategory = Household,
-	Weight 		= 1,
-	Type		= Normal,
-	DisplayName	=  Black Blanket With Skulls,
-	Icon 		= GreyBlanket,
-	WorldStaticModel = BlanketGrey,
-	OnCreate = Recipe.OnCreateItem.BlanketItem,
-	}
-
-	item PinkBlanketWithSkulls
-	{ 
-	DisplayCategory = Household,
-	Weight 		= 1,
-	Type		= Normal,
-	DisplayName	=  Pink Blanket With Skulls,
-	Icon 		= GreyBlanket,
-	WorldStaticModel = BlanketGrey,
-	OnCreate = Recipe.OnCreateItem.BlanketItem,
-	}
-
-	item BlueBlanketWithSkulls
-	{ 
-	DisplayCategory = Household,
-	Weight 		= 1,
-	Type		= Normal,
-	DisplayName	=  Blue Blanket With Skulls,
-	Icon 		= GreyBlanket,
-	WorldStaticModel = BlanketGrey,
-	OnCreate = Recipe.OnCreateItem.BlanketItem,
-	}
 
 
 }
