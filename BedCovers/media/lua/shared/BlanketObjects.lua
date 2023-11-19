@@ -12,10 +12,6 @@ BlanketObjects.TilesInfo = {
     ["Blankets.PurpleBlanket"] = {"bedding_purple"},
     ["Blankets.MilitaryGreenBlanket"] = {"bedding_militaryGreen"},
     ["Blankets.DarkBlueBlanket"] = {"bedding_darkBlue"},
-    ["Blankets.BlackBlanketWithSkulls"] = {"bedding_black"},
-    ["Blankets.PinkBlanketWithSkulls"] = {"bedding_pastelPink"},
-    ["Blankets.BlueBlanketWithSkulls"] = {"bedding_lightBlue"},
-	
 }
 
 for index,val in pairs(BlanketObjects.TilesInfo) do
