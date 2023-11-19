@@ -4,6 +4,8 @@ IGUI_EN = {
     IGUI_BedCovers_PatternName_Coloured = "%1 with %3 %2",
 
     IGUI_BedCovers_Pattern_SkullPattern = "skull pattern",
+    IGUI_BedCovers_Pattern_SpiffoPattern = "spiffo pattern",
+    IGUI_BedCovers_Pattern_PawsPattern = "paws pattern",
 
     IGUI_BedCovers_Purple = "purple",
     IGUI_BedCovers_Red = "red",
