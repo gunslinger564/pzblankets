@@ -1,0 +1,11 @@
+IGUI_EN = {
+    IGUI_BedCovers_PatternName_None = "Plain %1",
+    IGUI_BedCovers_PatternName_Simple = "%1 with %2",
+    IGUI_BedCovers_PatternName_Coloured = "%1 with %3 %2",
+
+    IGUI_BedCovers_Pattern_SkullPattern = "skull pattern",
+
+    IGUI_BedCovers_Purple = "purple",
+    IGUI_BedCovers_Red = "red",
+    IGUI_BedCovers_Yellow = "yellow",
+}

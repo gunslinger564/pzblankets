@@ -1,0 +1,10 @@
+Moveables_EN = {
+    --not used, added for clearer logs
+    Blue_SkullPattern = "Blue SkullPattern",
+    Fancy_SkullPattern = "Fancy SkullPattern",
+    Hospital_SkullPattern = "Hospital SkullPattern",
+    Large_Fancy_SkullPattern = "Large Fancy SkullPattern",
+    Large_Modern_SkullPattern = "Large Modern SkullPattern",
+    Large_Oak_SkullPattern = "Large Oak SkullPattern",
+    Simple_SkullPattern = "Simple SkullPattern",
+}

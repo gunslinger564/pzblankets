@@ -1,5 +1,7 @@
 require "recipecode"
 
+Recipe.OnCreateItem = Recipe.OnCreateItem or {}
+
 function Recipe.OnGiveXP.Tailoring3(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.Tailoring, 3)
 end
@@ -10,4 +12,14 @@ function RipBlanket_Oncreate(item,result,player)
         for i=1, nbr do
         player:getInventory():AddItem("Base.RippedSheets")
         end
+end
+
+
+---@param item InventoryItem
+function Recipe.OnCreateItem.BlanketItem(item)
+    local rolledCombo = BlanketObjects.PatternRolls[ZombRand(BlanketObjects.PatternRolls.n)]
+    if rolledCombo ~= nil then
+        item:getModData().movableData = item:getModData().movableData or {}
+        item:getModData().movableData.bedcoverData = rolledCombo
+    end
 end
