@@ -10,6 +10,12 @@ BlanketObjects.TilesInfo = {
     ["Blankets.RedBlanket"] = {"bedding_red"},
     ["Blankets.YellowBlanket"] = {"bedding_yellow"},
     ["Blankets.PurpleBlanket"] = {"bedding_purple"},
+    ["Blankets.MilitaryGreenBlanket"] = {"bedding_militaryGreen"},
+    ["Blankets.DarkBlueBlanket"] = {"bedding_darkBlue"},
+    ["Blankets.BlackBlanketWithSkulls"] = {"bedding_black"},
+    ["Blankets.PinkBlanketWithSkulls"] = {"bedding_pastelPink"},
+    ["Blankets.BlueBlanketWithSkulls"] = {"bedding_lightBlue"},
+	
 }
 
 for index,val in pairs(BlanketObjects.TilesInfo) do
@@ -29,15 +35,35 @@ BlanketObjects.PatternsInfo = {
             PaintTurquoise = 1,
             None = 10,
         },
-        lFancy      = "skull_pattern_4",
-        lModern     = "skull_pattern_16",
-        lOak        = "skull_pattern_40",
-        sBlue       = "skull_pattern_8",
-        sFancy      = "skull_pattern_0",
-        sHospital   = "skull_pattern_64",
-        sSimple     = "skull_pattern_32",
+        lFancy      = "bedding_skull_pattern_4",
+        lModern     = "bedding_skull_pattern_16",
+        lOak        = "bedding_skull_pattern_40",
+        sBlue       = "bedding_skull_pattern_8",
+        sFancy      = "bedding_skull_pattern_0",
+        sHospital   = "bedding_skull_pattern_64",
+        sSimple     = "bedding_skull_pattern_32",
     },
-    None = 12,
+    SpiffoPattern = {
+        lFancy      = "bedding_spiffo_pattern_4",
+        lModern     = "bedding_spiffo_pattern_16",
+        lOak        = "bedding_spiffo_pattern_40",
+        sBlue       = "bedding_spiffo_pattern_8",
+        sFancy      = "bedding_spiffo_pattern_0",
+        sHospital   = "bedding_spiffo_pattern_64",
+        sSimple     = "bedding_spiffo_pattern_32",
+	colourRolls = { None = 1,},
+    },
+    PawsPattern = {
+        lFancy      = "bedding_paws_pattern_4",
+        lModern     = "bedding_paws_pattern_16",
+        lOak        = "bedding_paws_pattern_40",
+        sBlue       = "bedding_paws_pattern_8",
+        sFancy      = "bedding_paws_pattern_0",
+        sHospital   = "bedding_paws_pattern_64",
+        sSimple     = "bedding_paws_pattern_32",
+	colourRolls = { None = 1,},
+    },
+    None = 0,
 }
 
 BlanketObjects.OverlayColours = {
