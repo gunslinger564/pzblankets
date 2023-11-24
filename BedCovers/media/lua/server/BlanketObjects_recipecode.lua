@@ -23,3 +23,37 @@ function Recipe.OnCreateItem.BlanketItem(item)
         item:getModData().movableData.bedcoverData = rolledCombo
     end
 end
+
+function Recipe.OnCreateItem.SkullPattern(item,result,player) 
+	if item:getModData().movableData ~= nil and item:getModData().movableData.bedcoverData == "None" or nil then
+		item:getModData().movableData = item:getModData().movableData or {}
+		local data = item:getModData().movableData.bedcoverData
+		data.colourName = nil
+		data.pattern = "SkullPattern"
+	end
+end
+
+
+function Recipe.OncreateItem.dyePattern(item,result,player)
+	item:getModData().movableData = item:getModData().movableData or {}
+	for i,_ in pairs(BlanketObjects.OverlayColours)
+		if string.find(item:getName() ,i)
+			item:getModData().movableData.bedcoverData.colourName = i
+		end
+	end
+end
+
+function Recipe.OnCanPerform.PatternCheck(recipe, playerObj, item)
+	item:getModData().movableData = item:getModData().movableData or {}
+	if item:getModData().movableData.bedcoverData.pattern == "None" or nil then
+		return true
+	end
+
+end
+
+function Recipe.OnCanPerform.ColourCheck(recipe, playerObj, item)
+	item:getModData().movableData = item:getModData().movableData or {}
+	if item:getModData().movableData.bedcoverData.colourName = nil then
+		return true
+	end
+end
