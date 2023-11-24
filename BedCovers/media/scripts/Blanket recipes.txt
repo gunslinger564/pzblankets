@@ -108,6 +108,31 @@ module Blankets
 	Result:PurpleBlanket,
     }
 
+    recipe Sew skull pattern into blanket
+    {
+	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	RemoveResultItem:true,
+	Sheet,
+	Thread=2,
+	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket,
+	SkillRequired:Tailoring=4,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+	Result:Sheet,
+	OnCreate:Recipe.OnCreateItem.SkullPattern,
+	OnCanPerform:Recipe.OnCanPerform.PatternCheck,
+    }
+    
+    recipe dye Pattern
+    {
+	HairDyeRed/HairDyePink/HairDyeBlack/HairDyeYellow,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OncreateItem.dyePattern,
+	Result:Sheet,
+	OnCanPerform:Recipe.OnCanPerform.ColourCheck,
+    }
+
     recipe Rip Blanket
     {
 	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket,
