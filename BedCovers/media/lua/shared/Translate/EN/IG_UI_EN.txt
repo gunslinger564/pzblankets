@@ -10,4 +10,8 @@ IGUI_EN = {
     IGUI_BedCovers_Purple = "purple",
     IGUI_BedCovers_Red = "red",
     IGUI_BedCovers_Yellow = "yellow",
+    IGUI_BedCovers_Black = "black",
+    IGUI_BedCovers_Blue = "blue",
+    IGUI_BedCovers_Green = "green",
+    IGUI_BedCovers_Pink = "pink",
 }

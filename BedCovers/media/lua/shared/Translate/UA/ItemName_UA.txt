@@ -1,10 +1,10 @@
 ItemName_UA = {
-    ItemName_Blankets.BlackBlanket = "Р§РѕСЂРЅР° РєРѕРІРґСЂР°",
-    ItemName_Blankets.PinkBlanket = "Р РѕР¶РµРІР° РєРѕРІРґСЂР°",
-    ItemName_Blankets.BlueBlanket = "РЎРёРЅСЏ РєРѕРІРґСЂР°",
-    ItemName_Blankets.GreenBlanket = "Р—РµР»РµРЅР° РєРѕРІРґСЂР°",
-    ItemName_Blankets.RedBlanket = "Р§РµСЂРІРѕРЅР° РєРѕРІРґСЂР°",
-    ItemName_Blankets.PurpleBlanket = "Р¤С–РѕР»РµС‚РѕРІР° РєРѕРІРґСЂР°",
-    ItemName_Blankets.YellowBlanket = "Р–РѕРІС‚Р° РєРѕРІРґСЂР°",
-    ItemName_Blankets.GreyBlanket = "РЎС–СЂР° РєРѕРІРґСЂР°",
+    ItemName_Blankets.BlackBlanket = "Чорна ковдра",
+    ItemName_Blankets.PinkBlanket = "Рожева ковдра",
+    ItemName_Blankets.BlueBlanket = "Синя ковдра",
+    ItemName_Blankets.GreenBlanket = "Зелена ковдра",
+    ItemName_Blankets.RedBlanket = "Червона ковдра",
+    ItemName_Blankets.PurpleBlanket = "Фіолетова ковдра",
+    ItemName_Blankets.YellowBlanket = "Жовта ковдра",
+    ItemName_Blankets.GreyBlanket = "Сіра ковдра",
 }

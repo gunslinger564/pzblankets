@@ -1,6 +1,5 @@
 module Blankets {
 
-
 	item BlackBlanket
 	{ 
 	DisplayCategory = Household,

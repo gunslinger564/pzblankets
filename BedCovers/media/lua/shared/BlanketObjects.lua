@@ -12,10 +12,11 @@ BlanketObjects.TilesInfo = {
     ["Blankets.PurpleBlanket"] = {"bedding_purple"},
     ["Blankets.MilitaryGreenBlanket"] = {"bedding_militaryGreen"},
     ["Blankets.DarkBlueBlanket"] = {"bedding_darkBlue"},
+	
 }
 
 for index,val in pairs(BlanketObjects.TilesInfo) do
- newName = index .. "WithSkulls"
+ local newName = index .. "WithSkulls"
 BlanketObjects.TextureTilesInfo[newName] = {val[1],"skull_pattern"}
 end  
 for index,val in pairs(BlanketObjects.TextureTilesInfo) do
@@ -40,6 +41,7 @@ BlanketObjects.PatternsInfo = {
         sSimple     = "bedding_skull_pattern_32",
     },
     SpiffoPattern = {
+	colourRolls = { None = 1,},
         lFancy      = "bedding_spiffo_pattern_4",
         lModern     = "bedding_spiffo_pattern_16",
         lOak        = "bedding_spiffo_pattern_40",
@@ -47,9 +49,10 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_spiffo_pattern_0",
         sHospital   = "bedding_spiffo_pattern_64",
         sSimple     = "bedding_spiffo_pattern_32",
-	colourRolls = { None = 1,},
+
     },
     PawsPattern = {
+	colourRolls = { None = 1,},
         lFancy      = "bedding_paws_pattern_4",
         lModern     = "bedding_paws_pattern_16",
         lOak        = "bedding_paws_pattern_40",
@@ -57,7 +60,7 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_paws_pattern_0",
         sHospital   = "bedding_paws_pattern_64",
         sSimple     = "bedding_paws_pattern_32",
-	colourRolls = { None = 1,},
+
     },
     None = 12,
 }
@@ -68,7 +71,9 @@ BlanketObjects.OverlayColours = {
     Purple  = { r = 0.50, g = 0.00, b = 0.50 },
     Red     = { r = 1.00, g = 0.00, b = 0.00 },
     Yellow  = { r = 0.80, g = 0.80, b = 0.00 },
-
+    Black   = { r = 0.20, g = 0.20, b=  0.20 },
+    Pink    = { r = 0.81, g = 0.60, b=  0.60 },
+    
     PaintBlack 		= {r=0.20,g=0.20,b=0.20},
 	PaintBlue  		= {r=0.35,g=0.35,b=0.80},
 	PaintBrown 		= {r=0.45,g=0.23,b=0.11},

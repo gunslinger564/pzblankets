@@ -25,7 +25,7 @@ function Spawns.SquareLoaded(square,tileset,bedcoverData)
     for i = objects:size() -1, 1, -1  do
         local obj = objects:get(i)
         if obj:getTextureName() ~= nil and obj:getTextureName():find("^furniture_bedding_01") ~= nil then
-            -- print(string.format("zxLog TargetSquareOnLoad set sprite: xyz: %d,%d,%d sprite: ",square:getX(),square:getY(),square:getZ()),(obj:getTextureName():gsub("^furniture_bedding_01",tileset)))
+             print(string.format("zxLog TargetSquareOnLoad set sprite: xyz: %d,%d,%d sprite: ",square:getX(),square:getY(),square:getZ()),(obj:getTextureName():gsub("^furniture_bedding_01",tileset)))
             obj:setSprite(getSprite((obj:getTextureName():gsub("^furniture_bedding_01",tileset))))
             if bedcoverData ~= nil then
                 BlanketObjects.SpriteUtil.addPattern(obj,BlanketObjects.SpriteUtil.getMatchingSprite(obj,bedcoverData.pattern,true):getName(),bedcoverData)
