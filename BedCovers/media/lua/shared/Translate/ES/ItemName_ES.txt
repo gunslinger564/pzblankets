@@ -1,10 +1,13 @@
 ItemName_ES = {
     ItemName_Blankets.BlackBlanket = "manta negra",
-    ItemName_Blankets.PinkBlanket = "Manta rosa",
     ItemName_Blankets.BlueBlanket = "Manta azul",
+    ItemName_Blankets.DarkBlueBlanket = "Manta azul oscuro",
     ItemName_Blankets.GreenBlanket = "Manta verde",
-    ItemName_Blankets.RedBlanket = "manta roja",
-    ItemName_Blankets.PurpleBlanket = "Manta morada",
-    ItemName_Blankets.YellowBlanket = "manta amarilla",
     ItemName_Blankets.GreyBlanket = "Manta gris",
+    ItemName_Blankets.MilitaryGreenBlanket = Military Green Blanket"",
+    ItemName_Blankets.PinkBlanket = "Manta rosa",
+    ItemName_Blankets.PurpleBlanket = "Manta morada",
+    ItemName_Blankets.RedBlanket = "manta roja",
+    ItemName_Blankets.WhiteBlanket = "manta blanca",
+    ItemName_Blankets.YellowBlanket = "manta amarilla",
 }

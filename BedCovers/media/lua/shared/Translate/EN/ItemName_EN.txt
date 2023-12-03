@@ -8,6 +8,6 @@ ItemName_EN = {
     ItemName_Blankets.PinkBlanket = "Pink Blanket",
     ItemName_Blankets.PurpleBlanket = "Purple Blanket",
     ItemName_Blankets.RedBlanket = "Red Blanket",
-    ItemName_Blankets.WhiteBlanket = "Dark Blue Blanket",
+    ItemName_Blankets.WhiteBlanket = "White Blanket",
     ItemName_Blankets.YellowBlanket = "Yellow Blanket",
 }
