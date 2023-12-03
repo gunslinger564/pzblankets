@@ -1,5 +1,16 @@
 module Blankets {
 
+	item WhiteBlanket
+	{ 
+	DisplayCategory = Household,
+	Weight 		= 1,
+	Type 		= Normal,
+	DisplayName	=  White Blanket,
+	Icon 		= WhiteBlanket,
+	WorldStaticModel = BlanketWhite,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
+	}
+
 	item BlackBlanket
 	{ 
 	DisplayCategory = Household,
@@ -94,8 +105,8 @@ module Blankets {
 	Weight 		= 1,
 	Type		= Normal,
 	DisplayName	=  Military Green Blanket,
-	Icon 		= GreyBlanket,
-	WorldStaticModel = BlanketGrey,
+	Icon 		= MilGreenBlanket,
+	WorldStaticModel = BlanketMilGreen,
 	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 

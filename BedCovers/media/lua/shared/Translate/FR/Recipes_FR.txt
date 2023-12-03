@@ -7,5 +7,5 @@ Recipes_FR = {
   Recipe_Sew_Red_Blanket = "Coudre une couverture rouge",
   Recipe_Sew_Yellow_Blanket = "Coudre une couverture jaune",
   Recipe_Sew_Purple_Blanket = "Coudre une couverture violette",
-  Recipe_Rip_Blanket = "Couverture déchirée",
+  Recipe_Rip_Blanket = "Couverture dÃ©chirÃ©e",
 }

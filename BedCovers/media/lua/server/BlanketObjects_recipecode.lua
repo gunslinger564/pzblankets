@@ -24,26 +24,62 @@ function Recipe.OnCreate.SkullPattern(item,result,player)
 	end
 end
 
+function Recipe.OnCreate.SpiffoPattern(item,result,player) 
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket") then
+			item:get(i):getModData().movableData ={bedcoverData = {pattern = "SpiffoPattern"}}
+		end
+	end
+end
+
+function Recipe.OnCreate.PawsPattern(item,result,player) 
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket") then
+			item:get(i):getModData().movableData ={bedcoverData = {pattern = "PawsPattern"}}
+		end
+	end
+end
+
+function Recipe.OnCreate.FloralPattern(item,result,player) 
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket") then
+			item:get(i):getModData().movableData ={bedcoverData = {pattern = "FloralPattern"}}
+		end
+	end
+end
+
+function Recipe.OnCreate.PlanetPattern(item,result,player) 
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket") then
+			item:get(i):getModData().movableData ={bedcoverData = {pattern = "PlanetsPattern"}}
+		end
+	end
+end
+
 
 function Recipe.OnCreate.dyePattern(items,result,player)
 local dye = nil
-local dyeT = {}
 local blanket = nil
 	for i=0,items:size()-1 do
 		if string.find(items:get(i):getType(),"HairDye") then
 			dye = items:get(i)
-			table.insert(dyeT,string.match(dye:getType(),"HairDye(.+)"))
 		elseif string.find(items:get(i):getType(),"Blanket") and items:get(i):getModData().movableData.bedcoverData ~= nil then
 			blanket = items:get(i)
 		end
 	end
-	if dye and blanket and not dyeT[2] then
+	if dye and blanket then
 		blanket:getModData().movableData.bedcoverData.colourName = string.match(dye:getType(),"HairDye(.+)")
-	elseif blanket and dye and dyeT[2] then
-		blanket:getModData().movableData.bedcoverData.colourName = Recipe.Oncreate.SortDye(dyeT)
-		print("both Dyes found")
 	end
 end
+
+function Recipe.OnCreate.dyePurple(item,result,player)
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket") then
+			item:get(i):getModData().movableData.bedcoverData.colourName = "Purple"
+		end
+	end
+end
+
 
 
 function Recipe.OnCreate.RemovePattern(item,result,player)
@@ -55,11 +91,25 @@ function Recipe.OnCreate.RemovePattern(item,result,player)
 	end
 end
 
+function Recipe.OnCreate.BleachBlanket(item,result,player)
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket")then
+				result:getModData().movableData = item:get(i):getModData().movableData
+				result:getModData().movableData.bedcoverData.colourName = nil
+		end
+	end
+end
+
 function Recipe.OnCreate.SewBlanket(item,result,player)
-					result:getModData().movableData = result:getModData().movableData or {}
-					result:getModData().movableData.bedcoverData = result:getModData().movableData.bedcoverData or {}
-					result:getModData().movableData.bedcoverData.pattern = "None"
-					result:getModData().movableData.bedcoverData.colourName = nil
+	result:getModData().movableData = {bedcoverData}
+end
+
+function Recipe.OnCreate.DyeBlanket(item,result,player)
+	for i=0,item:size()-1 do
+		if string.find(item:get(i):getType(),"Blanket")then
+			result:getModData().movableData = item:get(i):getModData().movableData
+		end
+	end
 end
 
 ---@param item InventoryItem
@@ -102,20 +152,6 @@ function Recipe.OnTest.RemovePattern(item)
 		if item:getModData().movableData ~= nil then
 			return item:getModData().movableData.bedcoverData ~= nil
 		else return false
-		end
-	end
-end
-
----@param dyeTypes table
-function Recipe.Oncreate.SortDye(dyeTypes)
-	local dye = dyeType[1]
-	local dye2 = dyeType[2]
-	print(dyeType[1] .. " " .. dyeType[2])
-	dyeCombos = {["BlueRed"] = {"Purple"}}
-	for i,n in pairs(dyeCombos) do
-		if string.find(dye, i) and string.find(dye2, i) then
-		print{"dyeCombo Created"}
-		return n[1]
 		end
 	end
 end

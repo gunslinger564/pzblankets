@@ -1,4 +1,4 @@
 ContextMenu_RU = {
-    ContextMenu_BO_PlaceBedSheet = "Разместить простыню (%1)",
-    ContextMenu_BO_RemoveBedSheet = "Убрать простыню",
+    ContextMenu_BO_PlaceBedSheet = "Р Р°Р·РјРµСЃС‚РёС‚СЊ РїСЂРѕСЃС‚С‹РЅСЋ (%1)",
+    ContextMenu_BO_RemoveBedSheet = "РЈР±СЂР°С‚СЊ РїСЂРѕСЃС‚С‹РЅСЋ",
 }

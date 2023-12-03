@@ -1,36 +1,29 @@
 BlanketObjects = {}
 BlanketObjects.Patches = {}
-BlanketObjects.TextureTilesInfo = {}
 BlanketObjects.TilesInfo = {
-    ["Blankets.BlackBlanket"] = {"bedding_black"},
-    ["Blankets.PinkBlanket"] = {"bedding_pastelPink"},
-    ["Blankets.BlueBlanket"] = {"bedding_lightBlue"},
-    ["Blankets.GreenBlanket"] = {"bedding_lightGreen"},
-    ["Blankets.GreyBlanket"] = {"bedding_grey"},
-    ["Blankets.RedBlanket"] = {"bedding_red"},
-    ["Blankets.YellowBlanket"] = {"bedding_yellow"},
-    ["Blankets.PurpleBlanket"] = {"bedding_purple"},
-    ["Blankets.MilitaryGreenBlanket"] = {"bedding_militaryGreen"},
-    ["Blankets.DarkBlueBlanket"] = {"bedding_darkBlue"},
+    ["Blankets.BlackBlanket"] = "bedding_black",
+    ["Blankets.PinkBlanket"] = "bedding_pastelPink",
+    ["Blankets.BlueBlanket"] = "bedding_lightBlue",
+    ["Blankets.GreenBlanket"] = "bedding_lightGreen",
+    ["Blankets.GreyBlanket"] = "bedding_grey",
+    ["Blankets.RedBlanket"] = "bedding_red",
+    ["Blankets.YellowBlanket"] = "bedding_yellow",
+    ["Blankets.PurpleBlanket"] = "bedding_purple",
+    ["Blankets.MilitaryGreenBlanket"] = "bedding_militaryGreen",
+    ["Blankets.DarkBlueBlanket"] = "bedding_darkBlue",
+    ["Blankets.WhiteBlanket"] = "bedding_white",
 	
 }
-
-for index,val in pairs(BlanketObjects.TilesInfo) do
- local newName = index .. "WithSkulls"
-BlanketObjects.TextureTilesInfo[newName] = {val[1],"skull_pattern"}
-end  
-for index,val in pairs(BlanketObjects.TextureTilesInfo) do
-BlanketObjects.TilesInfo[index] = {val[1],val[2]}
-end
 
 BlanketObjects.PatternsInfo = {
     SkullPattern = {
         colourRolls = {
-            Red = 10,
+            Red = 5,
             Purple = 3,
             Yellow = 2,
+            Black = 5,
             PaintTurquoise = 1,
-            None = 10,
+            None = 4,
         },
         lFancy      = "bedding_skull_pattern_4",
         lModern     = "bedding_skull_pattern_16",
@@ -41,7 +34,7 @@ BlanketObjects.PatternsInfo = {
         sSimple     = "bedding_skull_pattern_32",
     },
     SpiffoPattern = {
-	colourRolls = { None = 1,},
+	colourRolls = { None = 4,},
         lFancy      = "bedding_spiffo_pattern_4",
         lModern     = "bedding_spiffo_pattern_16",
         lOak        = "bedding_spiffo_pattern_40",
@@ -52,7 +45,7 @@ BlanketObjects.PatternsInfo = {
 
     },
     PawsPattern = {
-	colourRolls = { None = 1,},
+	colourRolls = { None = 4,},
         lFancy      = "bedding_paws_pattern_4",
         lModern     = "bedding_paws_pattern_16",
         lOak        = "bedding_paws_pattern_40",
@@ -62,7 +55,34 @@ BlanketObjects.PatternsInfo = {
         sSimple     = "bedding_paws_pattern_32",
 
     },
-    None = 12,
+    FloralPattern = {
+	colourRolls = {
+                    Red = 4,
+                    Purple = 4,
+                    Yellow = 2,
+                    Black = 2,
+                    None = 4,},
+        lFancy      = "bedding_floral_pattern_4",
+        lModern     = "bedding_floral_pattern_16",
+        lOak        = "bedding_floral_pattern_40",
+        sBlue       = "bedding_floral_pattern_8",
+        sFancy      = "bedding_floral_pattern_0",
+        sHospital   = "bedding_floral_pattern_64",
+        sSimple     = "bedding_floral_pattern_32",
+
+    },
+    PlanetsPattern = {
+	colourRolls = { None = 4,},
+        lFancy      = "bedding_planets_pattern_4",
+        lModern     = "bedding_planets_pattern_16",
+        lOak        = "bedding_planets_pattern_40",
+        sBlue       = "bedding_planets_pattern_8",
+        sFancy      = "bedding_planets_pattern_0",
+        sHospital   = "bedding_planets_pattern_64",
+        sSimple     = "bedding_planets_pattern_32",
+
+    },
+    None = 30,
 }
 
 BlanketObjects.OverlayColours = {

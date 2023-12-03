@@ -55,9 +55,9 @@ function Spawns.OnNewWithSprite(isoObject)
             for y = isoObject:getY(), isoObject:getY() + grid:getHeight()-1 do
                 local sq = getSquare(x,y,isoObject:getZ())
                 if sq ~= nil then
-                    Spawns.SquareLoaded(sq,BlanketObjects.TilesInfo[randItem][1],patData)
+                    Spawns.SquareLoaded(sq,BlanketObjects.TilesInfo[randItem],patData)
                 else
-                    TSL.addCommand(x,y,isoObject:getZ(), { command = "setBedCovers", tileset = BlanketObjects.TilesInfo[randItem][1], bedcoverData = patData })
+                    TSL.addCommand(x,y,isoObject:getZ(), { command = "setBedCovers", tileset = BlanketObjects.TilesInfo[randItem], bedcoverData = patData })
                 end
             end
         end

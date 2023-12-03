@@ -3,9 +3,8 @@ local BO = BlanketObjects
 ---@param character IsoPlayer
 ---@param bed IsoObject
 ---@param bedSheet String
----@param tileset String | table
+---@param tileset String
 function BO.placeBedSheet(character,bed,bedSheet,tileset)
-	tileset = tileset[1]
 	local bedSheetItem = character:getInventory():getFirstType(bedSheet)
 	if character:getInventory():RemoveOneOf(bedSheet,false) then
 		local objects = ArrayList.new()
@@ -28,7 +27,7 @@ end
 ---@param tileset string
 ---@param item string
 function BO.removeBedSheet(character,bed,tileset,item)
-	if bed:getTextureName():find(tileset[1]) == nil then return end
+	if bed:getTextureName():find(tileset) == nil then return end
 	local itemObj = character:getInventory():AddItem(item)
 	if itemObj ~= nil then
 		if not itemObj:getModData().movableData then itemObj:getModData().movableData = {} end
@@ -38,7 +37,7 @@ function BO.removeBedSheet(character,bed,tileset,item)
 	bed:getSpriteGridObjects(objects)
 	for i = 0, objects:size()- 1 do
 		local obj = objects:get(i)
-		obj:setSprite(getSprite((obj:getTextureName():gsub(tileset[1],"furniture_bedding_01",1))))
+		obj:setSprite(getSprite((obj:getTextureName():gsub(tileset,"furniture_bedding_01",1))))
 		BlanketObjects.SpriteUtil.removePattern(obj)
 		obj:transmitUpdatedSpriteToServer()
 	end
@@ -69,7 +68,7 @@ function BO.OnPreFillWorldObjectContextMenu(player, context, worldobjects, test)
 			end
 		else
 			for item,tileset in pairs(BO.TilesInfo) do
-				if bed_tileset == tileset[1] then 
+				if bed_tileset == tileset then
 					local removeBlanket = context:addOption(getText("ContextMenu_BO_RemoveBedSheet"),character,BO.removeBedSheet,bed,tileset,item)
 					break
 				end
