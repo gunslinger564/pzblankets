@@ -116,8 +116,8 @@ module Blankets {
 	Weight 		= 1,
 	Type		= Normal,
 	DisplayName	=  Dark Blue Blanket,
-	Icon 		= GreyBlanket,
-	WorldStaticModel = BlanketGrey,
+	Icon 		= DarkBlueBlanket,
+	WorldStaticModel = BlanketDarkBlue,
 	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 	
