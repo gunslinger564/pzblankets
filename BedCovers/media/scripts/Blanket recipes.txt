@@ -108,7 +108,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-	 recipe Dye Blanket Dark Blue
+	 recipe Dye Blanket DarkBlue
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
         WhiteBlanket,
@@ -122,7 +122,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-	 recipe Dye Blanket Military Green
+	 recipe Dye Blanket MilitaryGreen
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
         WhiteBlanket,
@@ -159,7 +159,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.BleachBlanket,
     }
 
-	recipe Sew skull pattern into blanket
+	recipe Sew Skull Pattern Blanket
     {
 	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	RemoveResultItem:true,
@@ -175,7 +175,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.SkullPattern,
     }
 	
-	recipe Sew spiffo pattern into blanket
+	recipe Sew Spiffo Pattern Blanket
     {
 	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	RemoveResultItem:true,
@@ -191,7 +191,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.SpiffoPattern,
     }
 
-	recipe Sew Paws pattern into blanket
+	recipe Sew Paws Pattern Blanket
     {
 	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	RemoveResultItem:true,
@@ -207,7 +207,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.PawsPattern,
     }
 
-	recipe Sew Planet pattern into blanket
+	recipe Sew Planet Pattern Blanket
     {
 	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	RemoveResultItem:true,
@@ -222,7 +222,7 @@ module Blankets
 	OnTest:Recipe.OnTest.PatternCheck,
 	OnCreate:Recipe.OnCreate.PlanetPattern,
     }
-	recipe Sew Floral pattern into blanket
+	recipe Sew Floral Pattern Blanket
     {
 	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
 	RemoveResultItem:true,
@@ -238,7 +238,7 @@ module Blankets
 	OnCreate:Recipe.OnCreate.FloralPattern,
     }
     
-	recipe dye Pattern Blue
+	recipe Dye Pattern Blue
     {
 	HairDyeBlue,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -252,7 +252,7 @@ module Blankets
 	Result:Sheet,
     }
 
-	recipe dye Pattern Green
+	recipe Dye Pattern Green
     {
 	HairDyeGreen,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -266,7 +266,7 @@ module Blankets
 	Result:Sheet,
     }
 
-	recipe dye Pattern Purple
+	recipe Dye Pattern Purple
     {
 	HairDyeBlue,HairDyeRed,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -279,7 +279,7 @@ module Blankets
 	Time:50,
 	Result:Sheet,
     }
-	recipe dye Pattern Red
+	recipe Dye Pattern Red
     {
 	HairDyeRed,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -293,7 +293,7 @@ module Blankets
 	Result:Sheet,
     }
 
-	recipe dye Pattern Yellow
+	recipe Dye Pattern Yellow
     {
 	HairDyeYellow,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -306,7 +306,7 @@ module Blankets
 	Time:50,
 	Result:Sheet,
     }
-	recipe dye Pattern Pink
+	recipe Dye Pattern Pink
     {
 	HairDyePink,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -320,7 +320,7 @@ module Blankets
 	Result:Sheet,
     }
 
-	recipe dye Pattern Black
+	recipe Dye Pattern Black
     {
 	HairDyeBlack,
 	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
@@ -345,7 +345,7 @@ module Blankets
         Category:Survivalist,
 	OnCreate:RipBlanket_OnCreate,
     }
-	recipe Remove Pattern
+	recipe Remove Blanket Pattern
     {
 	Sound:ClothesRipping,
 	RemoveResultItem:true,
