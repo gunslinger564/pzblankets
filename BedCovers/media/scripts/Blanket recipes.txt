@@ -149,13 +149,14 @@ module Blankets
 
 	recipe Bleach Blanket
     {
-	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket,
+	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
 	Bleach,
 	Time:100,
 	AnimNode:Pour,
 	Sound:PourWaterIntoObject,
     	Category:Survivalist,
 	Result:WhiteBlanket,
+	OnTest:Recipe.OnTest.BleachBlanket,
 	OnCreate:Recipe.OnCreate.BleachBlanket,
     }
 

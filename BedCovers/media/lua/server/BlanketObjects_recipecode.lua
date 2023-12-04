@@ -91,9 +91,11 @@ end
 
 function Recipe.OnCreate.BleachBlanket(item,result,player)
 	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket")then
-			result:getModData().movableData = item:get(i):getModData().movableData
-			result:getModData().movableData.bedcoverData.colourName = nil
+		if string.find(item:get(i):getType(),"Blanket") and item:get(i):getModData().movableData.bedcoverData ~= nil then
+				result:getModData().movableData = item:get(i):getModData().movableData or {}
+				if (item:get(i):getModData().movableData.bedcoverData.colourName) then
+					result:getModData().movableData.bedcoverData.colourName = nil
+				end
 		end
 	end
 end
@@ -118,6 +120,22 @@ function Recipe.OnCreateItem.BlanketItem(item)
 	if rolledCombo ~= nil then
 		item:getModData().movableData = item:getModData().movableData or {}
 		item:getModData().movableData.bedcoverData = rolledCombo
+	end
+end
+
+function Recipe.OnTest.BleachBlanket(item)
+	if string.find(item:getType(), "Blanket") then
+		if string.find(item:getType(),"White")  then
+			if item:getModData().movableData ~= nil then
+				if item:getModData().movableData.bedcoverData ~= nil then
+					return (item:getModData().movableData.bedcoverData.colourName ~= nil)
+				else return false
+				end
+			else return false
+			end
+		else return true
+		end
+	else return true
 	end
 end
 
