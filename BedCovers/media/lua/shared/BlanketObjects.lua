@@ -1,190 +1,5 @@
 BlanketObjects = {}
-
---[[--
-BO.vGridTiles = {
-	furniture_bedding_01_0 = {0,1}
-	furniture_bedding_01_1 = {0,0}
-	furniture_bedding_01_2 = {0,0}
-	furniture_bedding_01_3 = {0,1}
-	furniture_bedding_01_4 = {0,1}
-	furniture_bedding_01_5 = {0,0}
-	furniture_bedding_01_6 = {1,1}
-	furniture_bedding_01_7 = {1,0}
-	furniture_bedding_01_8 = {0,1}
-	furniture_bedding_01_9 = {0,0}
-	furniture_bedding_01_10 = {0,0}
-	furniture_bedding_01_11 = {1,0}
-	furniture_bedding_01_12 = {0,1}
-	furniture_bedding_01_13 = {1,1}
-	furniture_bedding_01_14 = {0,0}
-	furniture_bedding_01_15 = {1,0}
-	furniture_bedding_01_16 = {0,1}
-	furniture_bedding_01_17 = {1,1}
-	furniture_bedding_01_18 = {0,0}
-	furniture_bedding_01_19 = {1,0}
-	furniture_bedding_01_20 = {0,1}
-	furniture_bedding_01_21 = {0,0}
-	furniture_bedding_01_22 = {1,1}
-	furniture_bedding_01_23 = {1,0}
-	furniture_bedding_01_24 = {0,1}
-	furniture_bedding_01_25 = {0,0}
-	furniture_bedding_01_26 = {1,1}
-	furniture_bedding_01_27 = {1,0}
-	furniture_bedding_01_28 = {0,1}
-	furniture_bedding_01_29 = {1,1}
-	furniture_bedding_01_30 = {0,0}
-	furniture_bedding_01_31 = {1,0}
-	furniture_bedding_01_32 = {0,0}
-	furniture_bedding_01_33 = {1,0}
-	furniture_bedding_01_34 = {0,1}
-	furniture_bedding_01_35 = {0,0}
-	furniture_bedding_01_36 = {0,0}
-	furniture_bedding_01_37 = {1,0}
-	furniture_bedding_01_38 = {0,1}
-	furniture_bedding_01_39 = {0,0}
-	furniture_bedding_01_40 = {0,1}
-	furniture_bedding_01_41 = {1,1}
-	furniture_bedding_01_42 = {0,0}
-	furniture_bedding_01_43 = {1,0}
-	furniture_bedding_01_43 = {0,1}
-	furniture_bedding_01_44 = {0,1}
-	furniture_bedding_01_45 = {0,0}
-	furniture_bedding_01_46 = {1,1}
-	furniture_bedding_01_47 = {1,0}
-	furniture_bedding_01_48 = {0,1}
-	furniture_bedding_01_49 = {1,1}
-	furniture_bedding_01_50 = {0,0}
-	furniture_bedding_01_51 = {1,0}
-	furniture_bedding_01_52 = {0,1}
-	furniture_bedding_01_53 = {0,0}
-	furniture_bedding_01_54 = {1,1}
-	furniture_bedding_01_55 = {1,0}
-	furniture_bedding_01_56 = {0,1}
-	furniture_bedding_01_57 = {0,0}
-	furniture_bedding_01_58 = {0,0}
-	furniture_bedding_01_59 = {1,0}
-	furniture_bedding_01_60 = {0,0}
-	furniture_bedding_01_61 = {1,0}
-	furniture_bedding_01_62 = {0,1}
-	furniture_bedding_01_63 = {0,0}
-	furniture_bedding_01_64 = {0,1}
-	furniture_bedding_01_65 = {0,0}
-	furniture_bedding_01_66 = {0,0}
-	furniture_bedding_01_67 = {1,0}
-	furniture_bedding_01_68 = {0,1}
-	furniture_bedding_01_69 = {0,0}
-	furniture_bedding_01_70 = {0,0}
-	furniture_bedding_01_71 = {1,0}
-	furniture_bedding_01_72 = {0,1}
-	furniture_bedding_01_73 = {0,0}
-	furniture_bedding_01_74 = {1,1}
-	furniture_bedding_01_75 = {1,0}
-	furniture_bedding_01_76 = {0,1}
-	furniture_bedding_01_77 = {0,0}
-	furniture_bedding_01_78 = {0,0}
-	furniture_bedding_01_79 = {1,0}
-	furniture_bedding_01_80 = {0,1}
-	furniture_bedding_01_81 = {1,1}
-	furniture_bedding_01_82 = {0,0}
-	furniture_bedding_01_83 = {1,0}
-	furniture_bedding_01_84 = {0,1}
-	furniture_bedding_01_85 = {0,0}
-	furniture_bedding_01_86 = {0,0}
-	furniture_bedding_01_87 = {1,0}
-} --]]
---[[
-BO.cGridTiles = {
-	bedding_black_0 = {0,1}
-	bedding_black_1 = {0,0}
-	bedding_black_2 = {0,0}
-	bedding_black_3 = {0,1}
-	bedding_black_4 = {0,1}
-	bedding_black_5 = {0,0}
-	bedding_black_6 = {1,1}
-	bedding_black_7 = {1,0}
-	bedding_black_8 = {0,1}
-	bedding_black_9 = {0,0}
-	bedding_black_10 = {0,0}
-	bedding_black_11 = {1,0}
-	bedding_black_12 = {0,1}
-	bedding_black_13 = {1,1}
-	bedding_black_14 = {0,0}
-	bedding_black_15 = {1,0}
-	bedding_black_16 = {0,1}
-	bedding_black_17 = {1,1}
-	bedding_black_18 = {0,0}
-	bedding_black_19 = {1,0}
-	bedding_black_20 = {0,1}
-	bedding_black_21 = {0,0}
-	bedding_black_22 = {1,1}
-	bedding_black_23 = {1,0}
-	bedding_black_24 = {0,1}
-	bedding_black_25 = {0,0}
-	bedding_black_26 = {1,1}
-	bedding_black_27 = {1,0}
-	bedding_black_28 = {0,1}
-	bedding_black_29 = {1,1}
-	bedding_black_30 = {0,0}
-	bedding_black_31 = {1,0}
-	bedding_black_32 = {0,0}
-	bedding_black_33 = {1,0}
-	bedding_black_34 = {0,1}
-	bedding_black_35 = {0,0}
-	bedding_black_36 = {0,0}
-	bedding_black_37 = {1,0}
-	bedding_black_38 = {0,1}
-	bedding_black_39 = {0,0}
-	bedding_black_40 = {0,1}
-	bedding_black_41 = {1,1}
-	bedding_black_42 = {0,0}
-	bedding_black_43 = {1,0}
-	bedding_black_43 = {0,1}
-	bedding_black_44 = {0,1}
-	bedding_black_45 = {0,0}
-	bedding_black_46 = {1,1}
-	bedding_black_47 = {1,0}
-	bedding_black_48 = {0,1}
-	bedding_black_49 = {1,1}
-	bedding_black_50 = {0,0}
-	bedding_black_51 = {1,0}
-	bedding_black_52 = {0,1}
-	bedding_black_53 = {0,0}
-	bedding_black_54 = {1,1}
-	bedding_black_55 = {1,0}
-	bedding_black_56 = {0,1}
-	bedding_black_57 = {0,0}
-	bedding_black_58 = {0,0}
-	bedding_black_59 = {1,0}
-	bedding_black_60 = {0,0}
-	bedding_black_61 = {1,0}
-	bedding_black_62 = {0,1}
-	bedding_black_63 = {0,0}
-	bedding_black_64 = {0,1}
-	bedding_black_65 = {0,0}
-	bedding_black_66 = {0,0}
-	bedding_black_67 = {1,0}
-	bedding_black_68 = {0,1}
-	bedding_black_69 = {0,0}
-	bedding_black_70 = {0,0}
-	bedding_black_71 = {1,0}
-	bedding_black_72 = {0,1}
-	bedding_black_73 = {0,0}
-	bedding_black_74 = {1,1}
-	bedding_black_75 = {1,0}
-	bedding_black_76 = {0,1}
-	bedding_black_77 = {0,0}
-	bedding_black_78 = {0,0}
-	bedding_black_79 = {1,0}
-	bedding_black_80 = {0,1}
-	bedding_black_81 = {1,1}
-	bedding_black_82 = {0,0}
-	bedding_black_83 = {1,0}
-	bedding_black_84 = {0,1}
-	bedding_black_85 = {0,0}
-	bedding_black_86 = {0,0}
-	bedding_black_87 = {1,0}
-}--]]
-
+BlanketObjects.Patches = {}
 BlanketObjects.TilesInfo = {
     ["Blankets.BlackBlanket"] = "bedding_black",
     ["Blankets.PinkBlanket"] = "bedding_pastelPink",
@@ -194,14 +9,100 @@ BlanketObjects.TilesInfo = {
     ["Blankets.RedBlanket"] = "bedding_red",
     ["Blankets.YellowBlanket"] = "bedding_yellow",
     ["Blankets.PurpleBlanket"] = "bedding_purple",
+    ["Blankets.MilitaryGreenBlanket"] = "bedding_militaryGreen",
+    ["Blankets.DarkBlueBlanket"] = "bedding_darkBlue",
+    ["Blankets.WhiteBlanket"] = "bedding_white",
 }
 
-BlanketObjects.IgnoreTileList = {}
-for i = 36, 39 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
-for i = 56, 59 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
-for i = 84, 87 do BlanketObjects.IgnoreTileList["furniture_bedding_01_"..i] = true end
+BlanketObjects.PatternsInfo = {
+    SkullPattern = {
+        colourRolls = {
+            Red = 5,
+            Purple = 3,
+            Yellow = 2,
+            Black = 5,
+            PaintTurquoise = 1,
+            None = 4,
+        },
+        lFancy      = "bedding_skull_pattern_4",
+        lModern     = "bedding_skull_pattern_16",
+        lOak        = "bedding_skull_pattern_40",
+        sBlue       = "bedding_skull_pattern_8",
+        sFancy      = "bedding_skull_pattern_0",
+        sHospital   = "bedding_skull_pattern_64",
+        sSimple     = "bedding_skull_pattern_32",
+    },
+    SpiffoPattern = {
+        colourRolls = { None = 4,},
+        lFancy      = "bedding_spiffo_pattern_4",
+        lModern     = "bedding_spiffo_pattern_16",
+        lOak        = "bedding_spiffo_pattern_40",
+        sBlue       = "bedding_spiffo_pattern_8",
+        sFancy      = "bedding_spiffo_pattern_0",
+        sHospital   = "bedding_spiffo_pattern_64",
+        sSimple     = "bedding_spiffo_pattern_32",
+    },
+    PawsPattern = {
+        colourRolls = { None = 4,},
+        lFancy      = "bedding_paws_pattern_4",
+        lModern     = "bedding_paws_pattern_16",
+        lOak        = "bedding_paws_pattern_40",
+        sBlue       = "bedding_paws_pattern_8",
+        sFancy      = "bedding_paws_pattern_0",
+        sHospital   = "bedding_paws_pattern_64",
+        sSimple     = "bedding_paws_pattern_32",
+    },
+    FloralPattern = {
+        colourRolls = {
+            Red = 4,
+            Purple = 4,
+            Yellow = 2,
+            Black = 2,
+            None = 4,
+        },
+        lFancy      = "bedding_floral_pattern_4",
+        lModern     = "bedding_floral_pattern_16",
+        lOak        = "bedding_floral_pattern_40",
+        sBlue       = "bedding_floral_pattern_8",
+        sFancy      = "bedding_floral_pattern_0",
+        sHospital   = "bedding_floral_pattern_64",
+        sSimple     = "bedding_floral_pattern_32",
+    },
+    PlanetsPattern = {
+        colourRolls = { None = 4,},
+        lFancy      = "bedding_planets_pattern_4",
+        lModern     = "bedding_planets_pattern_16",
+        lOak        = "bedding_planets_pattern_40",
+        sBlue       = "bedding_planets_pattern_8",
+        sFancy      = "bedding_planets_pattern_0",
+        sHospital   = "bedding_planets_pattern_64",
+        sSimple     = "bedding_planets_pattern_32",
+    },
+    None = 30,
+}
 
-BlanketObjects.ItemTypes = {}
-for k,_ in pairs(BlanketObjects.TilesInfo) do
-	table.insert(BlanketObjects.ItemTypes,k)
-end
+BlanketObjects.OverlayColours = {
+    Blue    = { r = 0.00, g = 0.00, b = 1.00 },
+    Green   = { r = 0.00, g = 1.00, b = 0.00 },
+    Purple  = { r = 0.50, g = 0.00, b = 0.50 },
+    Red     = { r = 1.00, g = 0.00, b = 0.00 },
+    Yellow  = { r = 0.80, g = 0.80, b = 0.00 },
+    Black   = { r = 0.20, g = 0.20, b=  0.20 },
+    Pink    = { r = 0.81, g = 0.60, b=  0.60 },
+    
+    PaintBlack 		= {r=0.20,g=0.20,b=0.20},
+    PaintBlue  		= {r=0.35,g=0.35,b=0.80},
+    PaintBrown 		= {r=0.45,g=0.23,b=0.11},
+    PaintCyan  		= {r=0.50,g=0.80,b=0.80},
+    PaintGreen 		= {r=0.41,g=0.80,b=0.41},
+    PaintGrey  		= {r=0.50,g=0.50,b=0.50},
+    PaintLightBlue  = {r=0.55,g=0.55,b=0.87},
+    PaintLightBrown = {r=0.59,g=0.44,b=0.21},
+    PaintOrange		= {r=0.79,g=0.44,b=0.19},
+    PaintPink  		= {r=0.81,g=0.60,b=0.60},
+    PaintPurple		= {r=0.61,g=0.40,b=0.63},
+    PaintRed   		= {r=0.63,g=0.10,b=0.10},
+    PaintTurquoise  = {r=0.49,g=0.70,b=0.80},
+    PaintWhite 		= {r=0.92,g=0.92,b=0.92},
+    PaintYellow 	= {r=0.84,g=0.78,b=0.30},
+}

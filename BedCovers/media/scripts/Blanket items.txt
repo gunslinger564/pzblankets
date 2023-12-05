@@ -1,4 +1,15 @@
-module Blankets{
+module Blankets {
+
+	item WhiteBlanket
+	{ 
+	DisplayCategory = Household,
+	Weight 		= 1,
+	Type 		= Normal,
+	DisplayName	=  White Blanket,
+	Icon 		= WhiteBlanket,
+	WorldStaticModel = BlanketWhite,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
+	}
 
 	item BlackBlanket
 	{ 
@@ -8,6 +19,7 @@ module Blankets{
 	DisplayName	=  Black Blanket,
 	Icon 		= BlackBlanket,
 	WorldStaticModel = BlanketBlack,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 	
 	item PinkBlanket
@@ -18,6 +30,7 @@ module Blankets{
 	DisplayName	=  Pink Blanket,
 	Icon 		= PinkBlanket,
 	WorldStaticModel = BlanketPink,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 	
 	item BlueBlanket
@@ -28,6 +41,7 @@ module Blankets{
 	DisplayName	=  Blue Blanket,
 	Icon 		= BlueBlanket,
 	WorldStaticModel = BlanketBlue,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 
 	item GreenBlanket
@@ -38,6 +52,7 @@ module Blankets{
 	DisplayName	=  Green Blanket,
 	Icon 		= GreenBlanket,
 	WorldStaticModel = BlanketGreen,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 
 	item RedBlanket
@@ -48,6 +63,7 @@ module Blankets{
 	DisplayName	=  Red Blanket,
 	Icon 		= RedBlanket,
 	WorldStaticModel = BlanketRed,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 
 	item YellowBlanket
@@ -58,6 +74,7 @@ module Blankets{
 	DisplayName	=  Red Blanket,
 	Icon 		= YellowBlanket,
 	WorldStaticModel = BlanketYellow,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 
 	item PurpleBlanket
@@ -68,6 +85,7 @@ module Blankets{
 	DisplayName	=  Purple Blanket,
 	Icon	 	= PurpleBlanket,
 	WorldStaticModel = BlanketPurple,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
 
 	item GreyBlanket
@@ -78,6 +96,31 @@ module Blankets{
 	DisplayName	=  Grey Blanket,
 	Icon 		= GreyBlanket,
 	WorldStaticModel = BlanketGrey,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
 	}
+
+	item MilitaryGreenBlanket
+	{ 
+	DisplayCategory = Household,
+	Weight 		= 1,
+	Type		= Normal,
+	DisplayName	=  Military Green Blanket,
+	Icon 		= MilGreenBlanket,
+	WorldStaticModel = BlanketMilGreen,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
+	}
+
+	item DarkBlueBlanket
+	{ 
+	DisplayCategory = Household,
+	Weight 		= 1,
+	Type		= Normal,
+	DisplayName	=  Dark Blue Blanket,
+	Icon 		= DarkBlueBlanket,
+	WorldStaticModel = BlanketDarkBlue,
+	OnCreate = Recipe.OnCreateItem.BlanketItem,
+	}
+	
+
 
 }

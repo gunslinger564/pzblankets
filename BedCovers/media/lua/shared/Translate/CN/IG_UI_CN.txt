@@ -1,0 +1,19 @@
+IGUI_CN = {
+    IGUI_BedCovers_PatternName_None = "普通%1",
+    IGUI_BedCovers_PatternName_Simple = "%1 与 %2",
+    IGUI_BedCovers_PatternName_Coloured = "%1 与 %3 %2",
+
+    IGUI_BedCovers_Pattern_SkullPattern = "骷髅图案",
+    IGUI_BedCovers_Pattern_SpiffoPattern = "斯皮福模式",
+    IGUI_BedCovers_Pattern_PawsPattern = "爪子图案",
+    IGUI_BedCovers_Pattern_FloralPattern = "花卉图案",
+    IGUI_BedCovers_Pattern_PlanetsPattern = "行星图案",
+
+    IGUI_BedCovers_Purple = "紫色的",
+    IGUI_BedCovers_Red = "红色的",
+    IGUI_BedCovers_Yellow = "黄色的",
+    IGUI_BedCovers_Black = "黑色的",
+    IGUI_BedCovers_Blue = "蓝色的",
+    IGUI_BedCovers_Green = "绿色的",
+    IGUI_BedCovers_Pink = "粉色的",
+}

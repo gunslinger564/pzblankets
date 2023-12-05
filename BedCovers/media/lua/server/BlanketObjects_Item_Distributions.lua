@@ -16,6 +16,9 @@ do
         "Blankets.RedBlanket",      0.050,
         "Blankets.YellowBlanket",   0.020,
         "Blankets.PurpleBlanket",   0.010,
+        "Blankets.WhiteBlanket",    0.010,
+        "Blankets.MilitaryGreenBlanket",   0.001,
+        "Blankets.DarkBlueBlanket", 0.010,
     })
     addItems(list.WardrobeWomanClassy.junk.items,{
         "Blankets.BlackBlanket",    0.001,
@@ -26,6 +29,9 @@ do
         "Blankets.RedBlanket",      0.050,
         "Blankets.YellowBlanket",   0.020,
         "Blankets.PurpleBlanket",   0.010,
+        "Blankets.WhiteBlanket",    0.010,
+        "Blankets.MilitaryGreenBlanket",   0.001,
+        "Blankets.DarkBlueBlanket", 0.010,
     })
     addItems(list.WardrobeMan.junk.items,{
         "Blankets.BlackBlanket",    0.050,
@@ -36,6 +42,9 @@ do
         "Blankets.RedBlanket",      0.001,
         "Blankets.YellowBlanket",   0.001,
         "Blankets.PurpleBlanket",   0.010,
+        "Blankets.WhiteBlanket",    0.010,
+        "Blankets.MilitaryGreenBlanket",   0.020,
+        "Blankets.DarkBlueBlanket", 0.020,
     })
     addItems(list.WardrobeManClassy.junk.items,{
         "Blankets.BlackBlanket",    0.050,
@@ -46,6 +55,9 @@ do
         "Blankets.RedBlanket",      0.001,
         "Blankets.YellowBlanket",   0.001,
         "Blankets.PurpleBlanket",   0.010,
+        "Blankets.WhiteBlanket",    0.010,
+        "Blankets.MilitaryGreenBlanket",   0.020,
+        "Blankets.DarkBlueBlanket", 0.020,
     })
     addItems(list.CrateTailoring.junk.items,{
         "Blankets.BlackBlanket",    0.010,
@@ -56,6 +68,9 @@ do
         "Blankets.RedBlanket",      0.010,
         "Blankets.YellowBlanket",   0.010,
         "Blankets.PurpleBlanket",   0.010,
+        "Blankets.WhiteBlanket",    0.010,
+        "Blankets.MilitaryGreenBlanket",   0.010,
+        "Blankets.DarkBlueBlanket", 0.010,
     })
     addItems(list.LaundryLoad2.junk.items,{
         "Blankets.BlackBlanket",    0.001,
@@ -66,6 +81,9 @@ do
         "Blankets.RedBlanket",      0.001,
         "Blankets.YellowBlanket",   0.001,
         "Blankets.PurpleBlanket",   0.001,
+        "Blankets.WhiteBlanket",    0.010,
+        "Blankets.MilitaryGreenBlanket",   0.0001,
+        "Blankets.DarkBlueBlanket", 0.001,
     })
 
 end

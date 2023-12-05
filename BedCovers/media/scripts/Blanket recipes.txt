@@ -1,123 +1,362 @@
 module Blankets
 {
 
-    recipe Sew Black Blanket
+    recipe Dye Blanket Black
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-        Sheet=2,
+        WhiteBlanket,
         HairDyeBlack=2,
-        Thread=5,
         Result:BlackBlanket,
-        SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Time:150,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:BlackBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-    recipe Sew Pink Blanket
+    recipe Dye Blanket Pink
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+	WhiteBlanket,
 	HairDyePink=2,
-	Thread=5,
 	Time:100,
-	SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:PinkBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 	
-    recipe Sew Grey Blanket
+    recipe Dye Blanket Grey
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+	WhiteBlanket,
 	HairDyeBlack,
 	HairDyeWhite,
-	Thread=5,
 	Time:100,
-	SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:GreyBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-    recipe Sew Blue Blanket
+    recipe Dye Blanket Blue
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+	WhiteBlanket,
 	HairDyeBlue=2,
-	Thread=5,
 	Time:100,
-	SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:BlueBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-    recipe Sew Green Blanket
+    recipe Dye Blanket Green
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+	WhiteBlanket,
 	HairDyeGreen=2,
-	Thread=5,
 	Time:100,
-	SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:GreenBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-    recipe Sew Red Blanket
+    recipe Dye Blanket Red
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+	WhiteBlanket,
 	HairDyeRed=2,
-	Thread=5,
 	Time:100,
-	SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:RedBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-    recipe Sew Yellow Blanket
+    recipe Dye Blanket Yellow
     {
         keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+	WhiteBlanket,
 	HairDyeYellow=2,
-	Thread=5,
 	Time:100,
-	SkillRequired:Tailoring=2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
         Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
 	Result:YellowBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
     }
 
-    recipe Sew Purple Blanket
+    recipe Dye Blanket Purple 
     {
-        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
-	Sheet=2,
+    	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	WhiteBlanket,
 	HairDyeBlue,
 	HairDyeRed,
+	Time:100,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+    	Category:Survivalist,
+	Result:PurpleBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
+    }
+
+	 recipe Dye Blanket DarkBlue
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+        WhiteBlanket,
+        HairDyeBlack,
+	HairDyeBlue,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Time:100,
+        Category:Survivalist,
+	Result:DarkBlueBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
+    }
+
+	 recipe Dye Blanket MilitaryGreen
+    {
+        keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+        WhiteBlanket,
+        HairDyeGreen = 2,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Time:100,
+        Category:Survivalist,
+	Result:MilitaryGreenBlanket,
+	OnCreate:Recipe.OnCreate.DyeBlanket,
+    }
+    
+	recipe Sew Blanket
+    {
+    keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	Sheet=2,
 	Thread=5,
 	Time:100,
 	SkillRequired:Tailoring=2,
-        Category:Survivalist,
-        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
-	Result:PurpleBlanket,
+    Category:Survivalist,
+	Result:WhiteBlanket,
+	OnCreate:Recipe.OnCreate.SewBlanket,
     }
 
-    recipe Rip Blanket
+	recipe Bleach Blanket
     {
-	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket,
+	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Bleach,
+	Time:100,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+    	Category:Survivalist,
+	Result:WhiteBlanket,
+	OnTest:Recipe.OnTest.BleachBlanket,
+	OnCreate:Recipe.OnCreate.BleachBlanket,
+    }
+
+	recipe Sew Skull Pattern Blanket
+    {
+	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	RemoveResultItem:true,
+	Sheet,
+	Thread=2,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Time:100,
+	SkillRequired:Tailoring=4,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+	Result:Sheet,
+	OnTest:Recipe.OnTest.PatternCheck,
+	OnCreate:Recipe.OnCreate.SkullPattern,
+    }
+	
+	recipe Sew Spiffo Pattern Blanket
+    {
+	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	RemoveResultItem:true,
+	Sheet,
+	Thread=2,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Time:100,
+	SkillRequired:Tailoring=4,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+	Result:Sheet,
+	OnTest:Recipe.OnTest.PatternCheck,
+	OnCreate:Recipe.OnCreate.SpiffoPattern,
+    }
+
+	recipe Sew Paws Pattern Blanket
+    {
+	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	RemoveResultItem:true,
+	Sheet,
+	Thread=2,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Time:100,
+	SkillRequired:Tailoring=4,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+	Result:Sheet,
+	OnTest:Recipe.OnTest.PatternCheck,
+	OnCreate:Recipe.OnCreate.PawsPattern,
+    }
+
+	recipe Sew Planet Pattern Blanket
+    {
+	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	RemoveResultItem:true,
+	Sheet,
+	Thread=2,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Time:100,
+	SkillRequired:Tailoring=4,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+	Result:Sheet,
+	OnTest:Recipe.OnTest.PatternCheck,
+	OnCreate:Recipe.OnCreate.PlanetPattern,
+    }
+	recipe Sew Floral Pattern Blanket
+    {
+	keep [Recipe.GetItemTypes.SewingNeedle]/SutureNeedle,
+	RemoveResultItem:true,
+	Sheet,
+	Thread=2,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Time:100,
+	SkillRequired:Tailoring=4,
+        Category:Survivalist,
+        OnGiveXP:Recipe.OnGiveXP.Tailoring3,
+	Result:Sheet,
+	OnTest:Recipe.OnTest.PatternCheck,
+	OnCreate:Recipe.OnCreate.FloralPattern,
+    }
+    
+	recipe Dye Pattern Blue
+    {
+	HairDyeBlue,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePattern,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+
+	recipe Dye Pattern Green
+    {
+	HairDyeGreen,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePattern,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+
+	recipe Dye Pattern Purple
+    {
+	HairDyeBlue,HairDyeRed,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePurple,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+	recipe Dye Pattern Red
+    {
+	HairDyeRed,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePattern,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+
+	recipe Dye Pattern Yellow
+    {
+	HairDyeYellow,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePattern,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+	recipe Dye Pattern Pink
+    {
+	HairDyePink,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePattern,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+
+	recipe Dye Pattern Black
+    {
+	HairDyeBlack,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	RemoveResultItem:true,
+	OnTest:Recipe.OnTest.ColourCheck,
+	OnCreate:Recipe.OnCreate.dyePattern,
+	AnimNode:Pour,
+	Sound:PourWaterIntoObject,
+        Category:Survivalist,
+	Time:50,
+	Result:Sheet,
+    }
+    
+	recipe Rip Blanket
+    {
+	PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
         RemoveResultItem:true,
 	AnimNode:RipSheets,
 	Result:RippedSheets,
 	Time:100,
         Sound:ClothesRipping,
         Category:Survivalist,
-	OnCreate:RipBlanket_Oncreate,
+	OnCreate:RipBlanket_OnCreate,
     }
-
+	recipe Remove Blanket Pattern
+    {
+	Sound:ClothesRipping,
+	RemoveResultItem:true,
+	Category:Survivalist,
+	keep PurpleBlanket/YellowBlanket/BlackBlanket/RedBlanket/GreenBlanket/BlueBlanket/GreyBlanket/PinkBlanket/DarkBlueBlanket/MilitaryGreenBlanket/WhiteBlanket,
+	Result:RippedSheets,
+	OnTest:Recipe.OnTest.RemovePattern,
+	Time:50,
+	Result:RippedSheets,
+        Sound:ClothesRipping,
+	OnCreate:Recipe.OnCreate.RemovePattern,
+    }
 }

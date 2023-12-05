@@ -1,0 +1,19 @@
+IGUI_UA = {
+    IGUI_BedCovers_PatternName_None = "Звичайний %1",
+    IGUI_BedCovers_PatternName_Simple = "%1 з %2",
+    IGUI_BedCovers_PatternName_Coloured = "%1 з %3 %2",
+
+    IGUI_BedCovers_Pattern_SkullPattern = "візерунок черепа",
+    IGUI_BedCovers_Pattern_SpiffoPattern = "малюнок spiffo",
+    IGUI_BedCovers_Pattern_PawsPattern = "візерунок лап",
+    IGUI_BedCovers_Pattern_FloralPattern = "квітковий візерунок",
+    IGUI_BedCovers_Pattern_PlanetsPattern = "візерунок планет",
+
+    IGUI_BedCovers_Purple = "фіолетовий",
+    IGUI_BedCovers_Red = "червоний",
+    IGUI_BedCovers_Yellow = "жовтий",
+    IGUI_BedCovers_Black = "чорний",
+    IGUI_BedCovers_Blue = "блакитний",
+    IGUI_BedCovers_Green = "зелений",
+    IGUI_BedCovers_Pink = "рожевий",
+}

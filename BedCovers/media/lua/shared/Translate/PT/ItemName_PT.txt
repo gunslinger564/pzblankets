@@ -1,10 +1,13 @@
 ItemName_PT = {
     ItemName_Blankets.BlackBlanket = "Cobertor Preto",
-    ItemName_Blankets.PinkBlanket = "Manta Rosa",
     ItemName_Blankets.BlueBlanket = "Cobertor Azul",
+    ItemName_Blankets.DarkBlueBlanket = "Cobertor Azul Escuro",
     ItemName_Blankets.GreenBlanket = "Manta Verde",
-    ItemName_Blankets.RedBlanket = "Cobertor Vermelho",
-    ItemName_Blankets.PurpleBlanket = "Cobertor Roxo",
-    ItemName_Blankets.YellowBlanket = "Cobertor Amarelo",
     ItemName_Blankets.GreyBlanket = "Cobertor Cinza",
+    ItemName_Blankets.MilitaryGreenBlanket = "Manta Verde Militar",
+    ItemName_Blankets.PinkBlanket = "Manta Rosa",
+    ItemName_Blankets.PurpleBlanket = "Cobertor Roxo",
+    ItemName_Blankets.RedBlanket = "Cobertor Vermelho",
+    ItemName_Blankets.WhiteBlanket = "Cobertor Branco",
+    ItemName_Blankets.YellowBlanket = "Cobertor Amarelo",
 }

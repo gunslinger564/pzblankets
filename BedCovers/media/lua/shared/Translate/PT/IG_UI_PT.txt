@@ -1,0 +1,19 @@
+IGUI_PT = {
+    IGUI_BedCovers_PatternName_None = "Simples %1",
+    IGUI_BedCovers_PatternName_Simple = "%1 com %2",
+    IGUI_BedCovers_PatternName_Coloured = "%1 com %3 %2",
+
+    IGUI_BedCovers_Pattern_SkullPattern = "padrão de crânio",
+    IGUI_BedCovers_Pattern_SpiffoPattern = "padrão spiffo",
+    IGUI_BedCovers_Pattern_PawsPattern = "padrão de patas",
+    IGUI_BedCovers_Pattern_FloralPattern = "estampa floral",
+    IGUI_BedCovers_Pattern_PlanetsPattern = "padrão de planetas",
+
+    IGUI_BedCovers_Purple = "roxo",
+    IGUI_BedCovers_Red = "vermelho",
+    IGUI_BedCovers_Yellow = "amarelo",
+    IGUI_BedCovers_Black = "preto",
+    IGUI_BedCovers_Blue = "azul",
+    IGUI_BedCovers_Green = "verde",
+    IGUI_BedCovers_Pink = "rosa",
+}

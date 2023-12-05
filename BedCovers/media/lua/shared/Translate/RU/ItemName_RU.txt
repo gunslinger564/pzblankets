@@ -1,10 +1,13 @@
 ItemName_RU = {
     ItemName_Blankets.BlackBlanket = "Черное одеяло",
-    ItemName_Blankets.PinkBlanket = "Розовое одеяло",
     ItemName_Blankets.BlueBlanket = "Голубое одеяло",
+    ItemName_Blankets.DarkBlueBlanket = "Темно-синее одеяло",
     ItemName_Blankets.GreenBlanket = "Зеленое одеяло",
-    ItemName_Blankets.RedBlanket = "Красное одеяло",
-    ItemName_Blankets.PurpleBlanket = "Фиолетовое одеяло",
-    ItemName_Blankets.YellowBlanket = "Желтое одеяло",
     ItemName_Blankets.GreyBlanket = "Серое одеяло",
+    ItemName_Blankets.MilitaryGreenBlanket = "Военное зеленое одеяло",
+    ItemName_Blankets.PinkBlanket = "Розовое одеяло",
+    ItemName_Blankets.PurpleBlanket = "Фиолетовое одеяло",
+    ItemName_Blankets.RedBlanket = "Красное одеяло",
+    ItemName_Blankets.WhiteBlanket = "Белое одеяло",
+    ItemName_Blankets.YellowBlanket = "Желтое одеяло",
 }
