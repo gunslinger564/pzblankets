@@ -101,7 +101,7 @@ function SpriteUtil.OnLoadedTileDefinitions(manager)
         local props = getSprite(name):getProperties()
         if GroupNameToProp[props:Val("GroupName")] then
             props:Set("BedCoverType",GroupNameToProp[props:Val("GroupName")],false)
-            if props:Val("SpriteGridPos") == "0,0" then
+            if Spawns ~= nil and props:Val("SpriteGridPos") == "0,0" then
                 MapObjects.OnNewWithSprite(name,Spawns.OnNewWithSprite,10)
             end
         end
