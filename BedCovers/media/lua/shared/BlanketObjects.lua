@@ -14,6 +14,21 @@ BlanketObjects.TilesInfo = {
     ["Blankets.WhiteBlanket"] = "bedding_white",
 }
 
+---can be merged with above table
+BlanketObjects.SheetCurtainSprites = {
+    ["Blankets.BlackBlanket"]           = "blanket_curtain_1_8",
+    ["Blankets.BlueBlanket"]            = "blanket_curtain_1_32",
+    ["Blankets.DarkBlueBlanket"]        = "blanket_curtain_2_8",
+    ["Blankets.GreenBlanket"]           = "blanket_curtain_1_40",
+    ["Blankets.GreyBlanket"]            = "fixtures_windows_curtains_01_16",
+    ["Blankets.MilitaryGreenBlanket"]   = "blanket_curtain_2_0",
+    ["Blankets.PinkBlanket"]            = "blanket_curtain_1_24",
+    ["Blankets.PurpleBlanket"]          = "blanket_curtain_1_16",
+    ["Blankets.RedBlanket"]             = "blanket_curtain_1_48",
+    ["Blankets.WhiteBlanket"]           = "blanket_curtain_1_0",
+    ["Blankets.YellowBlanket"]          = "blanket_curtain_1_56",
+}
+
 BlanketObjects.PatternsInfo = {
     SkullPattern = {
         colourRolls = {
@@ -31,6 +46,7 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_skull_pattern_0",
         sHospital   = "bedding_skull_pattern_64",
         sSimple     = "bedding_skull_pattern_32",
+        sCurtain    = "curtain_patterns_8",
     },
     SpiffoPattern = {
         colourRolls = { None = 4,},
@@ -41,6 +57,7 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_spiffo_pattern_0",
         sHospital   = "bedding_spiffo_pattern_64",
         sSimple     = "bedding_spiffo_pattern_32",
+        sCurtain    = "curtain_patterns_16",
     },
     PawsPattern = {
         colourRolls = { None = 4,},
@@ -51,6 +68,7 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_paws_pattern_0",
         sHospital   = "bedding_paws_pattern_64",
         sSimple     = "bedding_paws_pattern_32",
+        sCurtain    = "curtain_patterns_32",
     },
     FloralPattern = {
         colourRolls = {
@@ -67,6 +85,7 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_floral_pattern_0",
         sHospital   = "bedding_floral_pattern_64",
         sSimple     = "bedding_floral_pattern_32",
+        sCurtain    = "curtain_patterns_0",
     },
     PlanetsPattern = {
         colourRolls = { None = 4,},
@@ -77,6 +96,7 @@ BlanketObjects.PatternsInfo = {
         sFancy      = "bedding_planets_pattern_0",
         sHospital   = "bedding_planets_pattern_64",
         sSimple     = "bedding_planets_pattern_32",
+        sCurtain    = "curtain_patterns_24",
     },
     None = 30,
 }
@@ -87,8 +107,8 @@ BlanketObjects.OverlayColours = {
     Purple  = { r = 0.50, g = 0.00, b = 0.50 },
     Red     = { r = 1.00, g = 0.00, b = 0.00 },
     Yellow  = { r = 0.80, g = 0.80, b = 0.00 },
-    Black   = { r = 0.20, g = 0.20, b=  0.20 },
-    Pink    = { r = 0.81, g = 0.60, b=  0.60 },
+    Black   = { r = 0.20, g = 0.20, b = 0.20 },
+    Pink    = { r = 0.81, g = 0.60, b = 0.60 },
     
     PaintBlack 		= {r=0.20,g=0.20,b=0.20},
     PaintBlue  		= {r=0.35,g=0.35,b=0.80},
@@ -106,3 +126,5 @@ BlanketObjects.OverlayColours = {
     PaintWhite 		= {r=0.92,g=0.92,b=0.92},
     PaintYellow 	= {r=0.84,g=0.78,b=0.30},
 }
+
+return BlanketObjects

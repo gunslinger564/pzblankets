@@ -43,6 +43,7 @@ function BO.removeBedSheet(character,bed,tileset,item)
 	end
 end
 
+---@type OnFillWorldObjectContextMenu_Callback
 function BO.OnPreFillWorldObjectContextMenu(player, context, worldobjects, test)
 	if test and ISWorldObjectContextMenu.Test then return true end
 	

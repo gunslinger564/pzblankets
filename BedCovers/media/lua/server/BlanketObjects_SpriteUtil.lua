@@ -24,11 +24,14 @@ function SpriteUtil.removePattern(isoObject)
     end
 end
 
----@param sprite IsoSprite
+---@param sprite IsoSprite | string
 ---@param curFacing string
 ---@param targetFacing string
 ---@return IsoSprite
-function SpriteUtil.getSpriteForFacing(sprite,curFacing,targetFacing)
+function SpriteUtil.getSpriteForFacing(sprite, curFacing, targetFacing)
+    if type(sprite) == "string" then
+        sprite = getSprite(sprite)
+    end
     if curFacing == targetFacing then return sprite end
     local offset = sprite:getProperties():Val(targetFacing .. "offset") or sprite:getProperties():Val(tostring(IsoDirections.reverse(IsoDirections[targetFacing])) .. "offset")
     if offset ~= nil then
@@ -64,6 +67,16 @@ function SpriteUtil.getMatchingSpriteGridForData(object,modData)
     if modData.movableData.bedcoverData == nil then return nil end
     return SpriteUtil.getMatchingSprite(object,modData.movableData.bedcoverData.pattern,false):getSpriteGrid()
 end
+
+function SpriteUtil.getCurtainSprite()
+
+end
+
+function SpriteUtil.getCurtainPatternSprite()
+    
+end
+
+--TODO patch toggle of curtains to hide overlays
 
 ---@param isoObject IsoObject
 function SpriteUtil.OnObjectAdded(isoObject)
