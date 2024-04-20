@@ -67,14 +67,16 @@ function Util.placeSheetCurtain(window, character, sheet)
     -- local sprite = BlanketObjects.SpriteUtil.getSpriteForFacing(BlanketObjects.SheetCurtainSprites[sheet:getFullType()], "E", direction)
     local offset = direction == "W" and 4 or direction == "E" and 5 or direction == "N" and 6 or direction == "S" and 7
     local spriteName = BlanketObjects.SheetCurtainSprites[sheet:getFullType()]:gsub("%d+$", function(s) return s + offset end)
-    local modData = sheet:getModData()
-    local pattern = modData.movableData ~= nil and modData.movableData.bedcoverData ~= nil and modData.movableData.bedcoverData.pattern or nil
+    local data = sheet:getModData().movableData ~= nil and sheet:getModData().movableData.bedcoverData or nil
 
     local curtain = IsoCurtain.new(square:getCell(), square, spriteName, north)
     -- local curtain = IsoCurtain.new(square:getCell(), square, sprite, north, true)
-    if pattern ~= nil then
-        local overlay = BlanketObjects.PatternsInfo[pattern]["sCurtain"]:gsub("%d+$", function(s) return s + offset end)
-        BlanketObjects.SpriteUtil.addPattern(curtain, overlay, modData.movableData.bedcoverData)
+    if data ~= nil then
+        data.openOverlay = BlanketObjects.PatternsInfo[data.pattern]["sCurtain"]:gsub("%d+$", function(s) return s + offset end)
+        data.closedOverlay = data.openOverlay:gsub("%d+$", function(s) return s - 4 end)
+        local modData = curtain:getModData()
+        modData.movableData = modData.movableData or {}
+        modData.movableData.bedcoverData = data
     end
     square:AddSpecialTileObject(curtain)
     curtain:transmitCompleteItemToServer()
@@ -82,6 +84,25 @@ function Util.placeSheetCurtain(window, character, sheet)
     local container = sheet:getContainer()
     if container ~= nil then
         container:Remove(sheet)
+    end
+    Util.onCurtainToggled(curtain)
+end
+
+---@param curtain IsoCurtain
+function Util.onCurtainToggled(curtain)
+    local data = curtain:getModData().movableData ~= nil and curtain:getModData().movableData.bedcoverData or nil
+    if data == nil then return end
+    local colour = data.colourName ~= nil and BlanketObjects.OverlayColours[data.colourName] or nil
+    local spriteName
+    if curtain:IsOpen() then
+        spriteName = data.openOverlay
+    else
+        spriteName = data.closedOverlay
+    end
+    if colour ~= nil then
+        curtain:setOverlaySprite(spriteName, colour.r, colour.g, colour.b, 0.5, true)
+    else
+        curtain:setOverlaySprite(spriteName, true)
     end
 end
 
