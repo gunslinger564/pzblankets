@@ -28,8 +28,8 @@ do
     ----------------------------------------------------------------------------------------------------------------------
     --- Patches
 
-    for _,f in pairs(BlanketObjects.Patches) do
-        f()
+    for _, patch in pairs(BlanketObjects.Patches) do
+        patch()
     end
     BlanketObjects.Patches = nil
 end
