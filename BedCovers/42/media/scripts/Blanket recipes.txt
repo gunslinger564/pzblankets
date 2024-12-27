@@ -13,7 +13,7 @@ module Blankets
         inputs {
 
 			item 1 [Blankets.Blanket] flags[Prop1],
-			item 1 [Base.HairDyeCommon;HairDyeUncommon;HairDyeRare;IndustrialDye] flags[Prop2],
+			item 1 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare;Base.IndustrialDye] flags[Prop2],
         }
          outputs
         {
@@ -30,7 +30,7 @@ module Blankets
         inputs {
 
 			item 1 [Blankets.WhiteBlanket] mode:destroy flags[Prop1],
-			item 1 [Base.HairDyeCommon;HairDyeUncommon;HairDyeRare;IndustrialDye] flags[Prop2],
+			item 1 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare;Base.IndustrialDye] flags[Prop2],
         }
          outputs
         {
