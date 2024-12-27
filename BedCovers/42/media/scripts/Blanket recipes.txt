@@ -12,7 +12,7 @@ module Blankets
 		OnTest		= Recipe.OnTest.ColourCheck,
         inputs {
 
-			item 1 [Blankets.Blanket] flags[Prop1],
+			item 1 [Blankets.Blanket] mode:keep flags[Prop1],
 			item 1 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare;Base.IndustrialDye] flags[Prop2],
         }
          outputs
@@ -51,7 +51,7 @@ module Blankets
 			item 1 tags[Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] flags[Prop2],
+			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {
@@ -72,7 +72,7 @@ module Blankets
 			item 1 tags[Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] flags[Prop2],
+			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {
@@ -93,7 +93,7 @@ module Blankets
 			item 1 tags[Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] flags[Prop2],
+			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {
@@ -114,7 +114,7 @@ module Blankets
 			item 1 tags[Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] flags[Prop2],
+			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {
@@ -135,7 +135,7 @@ module Blankets
 			item 1 tags[Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] flags[Prop2],
+			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {
@@ -151,7 +151,7 @@ module Blankets
         OnCreate 	= Recipe.OnCreate.BleachBlanket,
 		OnTest 		= Recipe.OnTest.BleachBlanket,
         inputs {
-			-fluid 0.25 [Bleach] flags[Prop1],
+		-fluid 0.25 [Bleach] flags[Prop1],
 		 item 1 tags[Blankets.Blanket] mode:destroy flags[Prop2],
         }
          outputs
@@ -170,7 +170,7 @@ module Blankets
 		OnTest 		= Recipe.OnTest.RemovePattern,
 		SkillRequired = Tailoring:2,
         inputs {
-         item 2 tags[Base.Sheet] flags[Prop2],
+        	 item 2 tags[Base.Sheet] flags[Prop2],
 		 item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight],
 		 item 5 [Base.Thread],
         }
@@ -189,7 +189,7 @@ module Blankets
 		OnTest = Recipe.OnTest.RemovePattern,
 
         inputs {
-         item 1 tags[Blankets.Blanket] flags[Prop2],
+         item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {
