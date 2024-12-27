@@ -1,0 +1,64 @@
+module Blankets{
+ model BlanketBlue
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_blue_plain,
+	scale = .15,
+	}
+ model BlanketGrey
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_grey_plain,
+	scale = .15,
+	}
+ model BlanketBlack
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_black_plain,
+	scale = .15,
+	}
+ model BlanketPink
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_pink_plain,
+	scale = .15,
+	}
+ model BlanketGreen
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_green_plain,
+	scale = .15,
+	}
+ model BlanketRed
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_red_plain,
+	scale = .15,
+	}
+ model BlanketPurple
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_purple_plain,
+	scale = .15,
+	}
+ model BlanketYellow
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_yellow_plain,
+	scale = .15,
+	}
+model BlanketDarkBlue
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_darkBlue_plain,
+	scale = .15,
+	}
+model BlanketMilGreen
+	{
+	mesh = WorldItems/blanket,
+	texture = blanketTexture_milGreen_plain,
+	scale = .15,
+	}
+
+
+}
