@@ -4,9 +4,7 @@ Recipe.OnCreateItem = Recipe.OnCreateItem or {}
 Recipe.OnTest = Recipe.OnTest or {}
 Recipe.OnCreate = Recipe.OnCreate or {}
 
-function Recipe.OnGiveXP.Tailoring3(recipe, ingredients, result, player)
-	player:getXp():AddXP(Perks.Tailoring, 3)
-end
+
 
 function RipBlanket_OnCreate(craftRecipeData, player)
 	local nbr = ZombRand(2,6)
@@ -16,48 +14,19 @@ function RipBlanket_OnCreate(craftRecipeData, player)
 	end
 end
 
-function Recipe.OnCreate.SkullPattern(craftRecipeData, player)
-	local item = craftRecipeData:getAllConsumedItems()
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") then
-			item:get(i):getModData().movableData ={bedcoverData = {pattern = "SkullPattern"}}
-		end
-	end
-end
 
-function Recipe.OnCreate.SpiffoPattern(item,result,player)
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") then
-			item:get(i):getModData().movableData ={bedcoverData = {pattern = "SpiffoPattern"}}
+function Recipe.OnCreate.sewPattern(craftRecipeData, player)
+	local recipeName = craftRecipeData:getRecipe():getName()
+	recipeName = string.gsub(recipeName, "%s+", "")
+	local pattern
+	for name in pairs(BlanketObjects.PatternsInfo) do
+		if string.find(recipeName,name) then
+			pattern = name
 		end
 	end
-end
-
-function Recipe.OnCreate.PawsPattern(craftRecipeData, player)
-	local item = craftRecipeData:getAllConsumedItems()
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") then
-			item:get(i):getModData().movableData ={bedcoverData = {pattern = "PawsPattern"}}
-		end
-	end
-end
-
-function Recipe.OnCreate.FloralPattern(craftRecipeData, player)
-	local item = craftRecipeData:getAllConsumedItems()
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") then
-			item:get(i):getModData().movableData ={bedcoverData = {pattern = "FloralPattern"}}
-		end
-	end
-end
-
-function Recipe.OnCreate.PlanetPattern(craftRecipeData, player)
-	local item = craftRecipeData:getAllConsumedItems()
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") then
-			item:get(i):getModData().movableData ={bedcoverData = {pattern = "PlanetsPattern"}}
-		end
-	end
+	if not pattern then return end
+	local item = craftRecipeData:getFirstInputItemWithFlag("Blankets.Blanket")
+	item:getModData().movableData ={bedcoverData = {pattern = pattern}}
 end
 
 
@@ -90,13 +59,6 @@ function Recipe.OnCreate.dyePattern(craftRecipeData, player)
 	end
 end
 
-function Recipe.OnCreate.dyePurple(item,result,player)
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") then
-			item:get(i):getModData().movableData.bedcoverData.colourName = "Purple"
-		end
-	end
-end
 
 function Recipe.OnCreate.RemovePattern(craftRecipeData, player)
 	local item = craftRecipeData:getAllConsumedItems()
@@ -120,7 +82,8 @@ function Recipe.OnCreate.BleachBlanket(craftRecipeData, player)
 	end
 end
 
-function Recipe.OnCreate.SewBlanket(item,result,player)
+function Recipe.OnCreate.SewBlanket(craftRecipeData, player)
+	local result = craftRecipeData:getFirstCreatedItem()
 	if result:getModData().movableData ~= nil then
         result:getModData().movableData.bedcoverData = nil
     end
@@ -149,7 +112,7 @@ function Recipe.OnCreate.DyeBlanket(craftRecipeData, player)
 		end
 	end
 		
-	if closestColor then 
+	if closestColor then
 		result = BlanketObjects.BlanketColors[closestColor]
 	end
 	if result then
