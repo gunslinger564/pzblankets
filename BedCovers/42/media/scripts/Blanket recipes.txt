@@ -12,7 +12,7 @@ module Blankets
 		OnTest		= Recipe.OnTest.ColourCheck,
         inputs {
 
-			item 1 [Blankets.Blanket] mode:keep flags[Prop1],
+			item 1 tags[Blankets.Blanket] mode:keep flags[Prop1],
 			item 1 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare;Base.IndustrialDye] flags[Prop2],
         }
          outputs
@@ -48,7 +48,7 @@ module Blankets
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
         inputs {
-			item 1 tags[Base.Sheet],
+			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
 			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
@@ -69,7 +69,7 @@ module Blankets
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
         inputs {
-			item 1 tags[Base.Sheet],
+			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
 			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
@@ -90,7 +90,7 @@ module Blankets
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
         inputs {
-			item 1 tags[Base.Sheet],
+			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
 			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
@@ -111,7 +111,7 @@ module Blankets
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
         inputs {
-			item 1 tags[Base.Sheet],
+			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
 			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
@@ -132,7 +132,7 @@ module Blankets
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
         inputs {
-			item 1 tags[Base.Sheet],
+			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
 			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
@@ -170,7 +170,7 @@ module Blankets
 		OnTest 		= Recipe.OnTest.RemovePattern,
 		SkillRequired = Tailoring:2,
         inputs {
-        	 item 2 tags[Base.Sheet] flags[Prop2],
+        	 item 2 [Base.Sheet] flags[Prop2],
 		 item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight],
 		 item 5 [Base.Thread],
         }
