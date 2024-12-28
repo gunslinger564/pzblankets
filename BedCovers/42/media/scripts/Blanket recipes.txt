@@ -12,8 +12,8 @@ module Blankets
 		OnTest		= Recipe.OnTest.ColourCheck,
         inputs {
 
-			item 1 tags[Blankets.Blanket] mode:keep flags[Prop1],
-			item 1 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare;Base.IndustrialDye] flags[Prop2],
+			item 1 tags[Blankets.Blanket] flags[Prop1],
+			item 1 [Base.HairDyeCommon;HairDyeUncommon;HairDyeRare;IndustrialDye] flags[Prop2],
         }
          outputs
         {
@@ -30,7 +30,7 @@ module Blankets
         inputs {
 
 			item 1 [Blankets.WhiteBlanket] mode:destroy flags[Prop1],
-			item 1 [Base.HairDyeCommon;Base.HairDyeUncommon;Base.HairDyeRare;Base.IndustrialDye] flags[Prop2],
+			item 1 [Base.HairDyeCommon;HairDyeUncommon;HairDyeRare;IndustrialDye] flags[Prop2],
         }
          outputs
         {
@@ -43,7 +43,7 @@ module Blankets
         Category    =  Tailoring,
         tags        = InHandCraft;CanBeDoneInDark,
         timedAction = SewingCloth,
-        OnCreate 	= Recipe.OnCreate.FloralPattern,
+        OnCreate 	= Recipe.OnCreate.sewPattern,
 		OnTest 		= Recipe.OnTest.PatternCheck,
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
@@ -51,20 +51,20 @@ module Blankets
 			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
+			item 1 tags[Blankets.Blanket] flags[Prop2],
         }
          outputs
         {
         }
     }
 
-			craftRecipe Sew Planet Pattern Blanket
+			craftRecipe Sew Planets Pattern Blanket
     {
         time        = 100,
         Category    =  Tailoring,
         tags        = InHandCraft;CanBeDoneInDark,
         timedAction = SewingCloth,
-        OnCreate 	= Recipe.OnCreate.PlanetPattern,
+        OnCreate 	= Recipe.OnCreate.sewPattern,
 		OnTest 		= Recipe.OnTest.PatternCheck,
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
@@ -72,7 +72,7 @@ module Blankets
 			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
+			item 1 tags[Blankets.Blanket] flags[Prop2],
         }
          outputs
         {
@@ -85,7 +85,7 @@ module Blankets
         Category    =  Tailoring,
         tags        = InHandCraft;CanBeDoneInDark,
         timedAction = SewingCloth,
-        OnCreate 	= Recipe.OnCreate.PawsPattern,
+        OnCreate 	= Recipe.OnCreate.sewPattern,
 		OnTest 		= Recipe.OnTest.PatternCheck,
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
@@ -93,7 +93,7 @@ module Blankets
 			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
+			item 1 tags[Blankets.Blanket] flags[Prop2],
         }
          outputs
         {
@@ -106,7 +106,7 @@ module Blankets
         Category    =  Tailoring,
         tags        = InHandCraft;CanBeDoneInDark,
         timedAction = SewingCloth,
-        OnCreate 	= Recipe.OnCreate.SpiffoPattern,
+        OnCreate 	= Recipe.OnCreate.sewPattern,
 		OnTest 		= Recipe.OnTest.PatternCheck,
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
@@ -114,7 +114,7 @@ module Blankets
 			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
+			item 1 tags[Blankets.Blanket] flags[Prop2],
         }
          outputs
         {
@@ -127,7 +127,7 @@ module Blankets
         Category    =  Tailoring,
         tags        = InHandCraft;CanBeDoneInDark,
         timedAction = SewingCloth,
-        OnCreate 	= Recipe.OnCreate.SkullPattern,
+        OnCreate 	= Recipe.OnCreate.sewPattern,
 		OnTest 		= Recipe.OnTest.PatternCheck,
 		xpAward 	= Tailoring:3,
 		SkillRequired = Tailoring:4,
@@ -135,7 +135,7 @@ module Blankets
 			item 1 [Base.Sheet],
 			item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight;Prop1],
 			item 2 [Base.Thread],
-			item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
+			item 1 tags[Blankets.Blanket] flags[Prop2],
         }
          outputs
         {
@@ -151,7 +151,7 @@ module Blankets
         OnCreate 	= Recipe.OnCreate.BleachBlanket,
 		OnTest 		= Recipe.OnTest.BleachBlanket,
         inputs {
-		-fluid 0.25 [Bleach] flags[Prop1],
+			-fluid 0.25 [Bleach] flags[Prop1],
 		 item 1 tags[Blankets.Blanket] mode:destroy flags[Prop2],
         }
          outputs
@@ -166,11 +166,10 @@ module Blankets
         Category    =  Tailoring,
         tags        = InHandCraft;CanBeDoneInDark,
         timedAction = RipClothing,
-        OnCreate 	= Recipe.OnCreate.RemovePattern,
-		OnTest 		= Recipe.OnTest.RemovePattern,
+        OnCreate 	= Recipe.OnCreate.SewBlanket,
 		SkillRequired = Tailoring:2,
         inputs {
-        	 item 2 [Base.Sheet] flags[Prop2],
+         item 2 [Base.Sheet] flags[Prop2],
 		 item 1 tags[SewingNeedle] mode:keep flags[MayDegradeLight],
 		 item 5 [Base.Thread],
         }
@@ -189,7 +188,7 @@ module Blankets
 		OnTest = Recipe.OnTest.RemovePattern,
 
         inputs {
-         item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
+         item 1 tags[Blankets.Blanket] flags[Prop2],
         }
          outputs
         {
