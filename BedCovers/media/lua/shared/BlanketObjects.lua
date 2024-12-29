@@ -106,3 +106,47 @@ BlanketObjects.OverlayColours = {
     PaintWhite 		= {r=0.92,g=0.92,b=0.92},
     PaintYellow 	= {r=0.84,g=0.78,b=0.30},
 }
+BlanketObjects.HSLColors = {}
+BlanketObjects.BlanketColors = {}
+for i ,table in pairs(BlanketObjects.OverlayColours)do
+BlanketObjects.HSLColors[i] = BlanketObjects.rgbToHsl(table.r,table.g,table.b)
+if luautils.stringStarts(i, "White") then break end
+end
+for i ,table in pairs(BlanketObjects.OverlayColours)do
+    if  luautils.stringStarts(i, "MilGreen") then
+        BlanketObjects.BlanketColors[i] = "Blankets.MilitaryGreenBlanket"
+    else BlanketObjects.BlanketColors[i] = "Blankets."..i.."Blanket"
+    end
+    if luautils.stringStarts(i, "White") then break end
+end
+
+
+function BlanketObjects.rgbToHsl(r, g, b)
+    local r = r * 100
+    local g = g * 100
+    local b = b * 100
+    r, g, b = r / 255, g / 255, b / 255
+  
+    local max, min = math.max(r, g, b), math.min(r, g, b)
+    local h, s, l
+  
+    l = (max + min) / 2
+  
+    if max == min then
+      h, s = 0, 0 -- achromatic
+    else
+      local d = max - min
+      local s
+      if l > 0.5 then s = d / (2 - max - min) else s = d / (max + min) end
+      if max == r then
+        h = (g - b) / d
+        if g < b then h = h + 6 end
+      elseif max == g then h = (b - r) / d + 2
+      elseif max == b then h = (r - g) / d + 4
+      end
+      h = h / 6
+    end
+
+    return h or nil
+end
+
