@@ -109,15 +109,12 @@ BlanketObjects.OverlayColours = {
 BlanketObjects.HSLColors = {}
 BlanketObjects.BlanketColors = {}
 for i ,table in pairs(BlanketObjects.OverlayColours)do
-BlanketObjects.HSLColors[i] = BlanketObjects.rgbToHsl(table.r,table.g,table.b)
-if luautils.stringStarts(i, "White") then break end
-end
-for i ,table in pairs(BlanketObjects.OverlayColours)do
     if  luautils.stringStarts(i, "MilGreen") then
         BlanketObjects.BlanketColors[i] = "Blankets.MilitaryGreenBlanket"
     else BlanketObjects.BlanketColors[i] = "Blankets."..i.."Blanket"
     end
-    if luautils.stringStarts(i, "White") then break end
+    BlanketObjects.HSLColors[i] = BlanketObjects.rgbToHsl(table.r,table.g,table.b)
+if luautils.stringStarts(i, "White") then break end
 end
 
 
