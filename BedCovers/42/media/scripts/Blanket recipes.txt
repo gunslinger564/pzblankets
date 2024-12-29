@@ -31,6 +31,7 @@ module Blankets
 
 			item 1 [Blankets.WhiteBlanket] mode:destroy flags[Prop1],
 			item 1 [Base.HairDyeCommon;HairDyeUncommon;HairDyeRare;IndustrialDye] flags[Prop2],
+            -fluid 0.50 [Dye],
         }
          outputs
         {
@@ -151,12 +152,13 @@ module Blankets
         OnCreate 	= Recipe.OnCreate.BleachBlanket,
 		OnTest 		= Recipe.OnTest.BleachBlanket,
         inputs {
-			-fluid 0.25 [Bleach] flags[Prop1],
+            item 1 [Base.Bleach] flags[Prop1],
+			-fluid 0.25 [Bleach],
 		 item 1 tags[Blankets.Blanket] mode:destroy flags[Prop2],
         }
          outputs
         {
-			Blankets.WhiteBlanket,
+			item 1 Blankets.WhiteBlanket,
         }
     }
 
@@ -175,7 +177,7 @@ module Blankets
         }
          outputs
         {
-			Blankets.WhiteBlanket,
+			item 1 Blankets.WhiteBlanket,
         }
     }
 	craftRecipe Remove Blanket Pattern
@@ -188,7 +190,7 @@ module Blankets
 		OnTest = Recipe.OnTest.RemovePattern,
 
         inputs {
-         item 1 tags[Blankets.Blanket] flags[Prop2],
+         item 1 tags[Blankets.Blanket] mode:keep flags[Prop2],
         }
          outputs
         {

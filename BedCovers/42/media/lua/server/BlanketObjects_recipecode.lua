@@ -61,25 +61,23 @@ end
 
 
 function Recipe.OnCreate.RemovePattern(craftRecipeData, player)
-	local item = craftRecipeData:getAllConsumedItems()
-	for i=0,item:size()-1 do
-		item:get(i):getModData().movableData.bedcoverData = item:get(i):getModData().movableData.bedcoverData or {}
-		if item:get(i):getModData().movableData ~= nil then
-			item:get(i):getModData().movableData.bedcoverData = nil
+	local item = craftRecipeData:getFirstInputItemWithFlag("Blankets.Blanket")
+		item:getModData().movableData.bedcoverData = item:getModData().movableData.bedcoverData or {}
+		if item:getModData().movableData ~= nil then
+			item:getModData().movableData.bedcoverData = nil
 		end
-	end
 end
 
 function Recipe.OnCreate.BleachBlanket(craftRecipeData, player)
-	local item = craftRecipeData:getAllConsumedItems()
-	for i=0,item:size()-1 do
-		if string.find(item:get(i):getType(),"Blanket") and item:get(i):getModData().movableData.bedcoverData ~= nil then
-				result:getModData().movableData = item:get(i):getModData().movableData or {}
-				if (item:get(i):getModData().movableData.bedcoverData.colourName) then
+	local item = craftRecipeData:getFirstInputItemWithFlag("Blankets.Blanket")
+	local result = craftRecipeData:getFirstCreatedItem()
+
+		if  item:getModData() and item:getModData().movableData and item:getModData().movableData.bedcoverData then
+				result:getModData().movableData = item:getModData().movableData or {}
+				if (item:getModData().movableData.bedcoverData.colourName) then
 					result:getModData().movableData.bedcoverData.colourName = nil
 				end
 		end
-	end
 end
 
 function Recipe.OnCreate.SewBlanket(craftRecipeData, player)
@@ -102,6 +100,7 @@ function Recipe.OnCreate.DyeBlanket(craftRecipeData, player)
     local smallestDifference = math.huge
 
     -- Find the closest color by checking the smallest difference in hue
+	print("itemHue: "..itemHue)
 	if itemHue then
 		for c, value in pairs(BlanketObjects.HSLColors) do
 			local difference = math.abs(itemHue - value)
@@ -111,17 +110,14 @@ function Recipe.OnCreate.DyeBlanket(craftRecipeData, player)
 			end
 		end
 	end
-		
+		print("closest color = " .. closestColor)
 	if closestColor then
-		result = BlanketObjects.BlanketColors[closestColor]
+		result = instanceItem(BlanketObjects.BlanketColors[closestColor])
+		print("result: "..BlanketObjects.BlanketColors[closestColor])
 	end
 	if result then
-		for i=0,item:size()-1 do
-			if string.find(item:get(i):getType(),"Blanket")then
-				result:getModData().movableData = item:get(i):getModData().movableData
-			end
-		end
-		player:getInventory():AddItem(result)
+			result:getModData().movableData = item:get(0):getModData().movableData
+			player:getInventory():AddItem(result)
 	end
 end
 

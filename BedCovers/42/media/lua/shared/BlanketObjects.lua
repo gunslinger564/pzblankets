@@ -87,9 +87,13 @@ BlanketObjects.OverlayColours = {
     Purple  = { r = 0.50, g = 0.00, b = 0.50 },
     Red     = { r = 1.00, g = 0.00, b = 0.00 },
     Yellow  = { r = 0.80, g = 0.80, b = 0.00 },
-    Black   = { r = 0.20, g = 0.20, b=  0.20 },
-    Pink    = { r = 0.81, g = 0.60, b=  0.60 },
-    
+    Black   = { r = 0.20, g = 0.20, b = 0.20 },
+    Pink    = { r = 0.81, g = 0.60, b = 0.60 },
+    Grey    = { r = 0.50, g = 0.50, b = 0.50 },
+    DarkBlue= { r = 0.35, g = 0.35, b = 0.80 },
+    MilGreen= { r = 0.00, g = 1.00, b = 0.00 },
+    White 	= { r = 1.00, g = 1.00, b = 1.00 },
+
     PaintBlack 		= {r=0.20,g=0.20,b=0.20},
     PaintBlue  		= {r=0.35,g=0.35,b=0.80},
     PaintBrown 		= {r=0.45,g=0.23,b=0.11},
@@ -107,31 +111,7 @@ BlanketObjects.OverlayColours = {
     PaintYellow 	= {r=0.84,g=0.78,b=0.30},
 }
 
-BlanketObjects.HSLColors = {
-    ["Blue"]    = BlanketObjects.rgbToHsl(0.00,0.00,1.00),
-    ["Green"]   = BlanketObjects.rgbToHsl(0.00,1.00,0.00),
-    ["Red"]     = BlanketObjects.rgbToHsl(1.00,0.00,0.00),
-    ["Purple"]  = BlanketObjects.rgbToHsl(0.50, 0, 0.50),
-    ["Yellow"]  = BlanketObjects.rgbToHsl(0.80, 0.80, 0.00),
-    ["Black"]   = BlanketObjects.rgbToHsl(0.20, 0.20, 0.20),
-    ["Pink"]    = BlanketObjects.rgbToHsl(0.81,0.60,0.60),
-    ["Orange"]	= BlanketObjects.rgbToHsl(0.79,0.44,0.19),
-    ["Brown"]   = BlanketObjects.rgbToHsl(0.29,0.227,0.145),
-    ["White"]   = BlanketObjects.rgbToHsl(1.00,1.00,1.00),
-}
-BlanketObjects.BlanketColors = {
-White = Blankets.WhiteBlanket,
-Black = Blankets.BlackBlanket,
-Pink = Blankets.PinkBlanket,
-Blue = Blankets.BlueBlanket,
-Green = Blankets.GreenBlanket,
-Red = Blankets.RedBlanket,
-Yellow = Blankets.YellowBlanket,
-Purple = Blankets.PurpleBlanket,
-Grey = Blankets.GreyBlanket,
-MilGreen = Blankets.MilitaryGreenBlanket,
-DarkBlue = Blankets.DarkBlueBlanket,
-}
+
 
 function BlanketObjects.rgbToHsl(r, g, b)
     local r = r * 100
@@ -148,7 +128,6 @@ function BlanketObjects.rgbToHsl(r, g, b)
       h, s = 0, 0 -- achromatic
     else
       local d = max - min
-      local s
       if l > 0.5 then s = d / (2 - max - min) else s = d / (max + min) end
       if max == r then
         h = (g - b) / d
@@ -161,3 +140,15 @@ function BlanketObjects.rgbToHsl(r, g, b)
 
     return h or nil
 end
+
+BlanketObjects.HSLColors = {}
+BlanketObjects.BlanketColors = {}
+for i ,table in pairs(BlanketObjects.OverlayColours)do
+    if  luautils.stringStarts(i, "MilGreen") then
+        BlanketObjects.BlanketColors[i] = "Blankets.MilitaryGreenBlanket"
+    else BlanketObjects.BlanketColors[i] = "Blankets."..i.."Blanket"
+    end
+    BlanketObjects.HSLColors[i] = BlanketObjects.rgbToHsl(table.r,table.g,table.b)
+if luautils.stringStarts(i, "White") then break end
+end
+

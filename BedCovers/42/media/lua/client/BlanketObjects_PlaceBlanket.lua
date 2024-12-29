@@ -5,8 +5,10 @@ local BO = BlanketObjects
 ---@param bedSheet String
 ---@param tileset String
 function BO.placeBedSheet(character,bed,bedSheet,tileset)
+	print("placeBedSheet attempt")
 	local bedSheetItem = character:getInventory():getFirstType(bedSheet)
 	if character:getInventory():RemoveOneOf(bedSheet,false) then
+		print("placeBedSheet removeing inventory item attempt")
 		local objects = ArrayList.new()
 		bed:getSpriteGridObjects(objects)
 		-- if objects:size() < bed:getSprite():getSpriteGrid():getSpriteCount() then return character:Say("broken bed") end --text

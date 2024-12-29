@@ -5,3 +5,4 @@ description=Makes beds have blankets that can be removed and crafted
 pack=guns_bedcovers_2x
 tiledef=guns_bedcovers_tiledefinitions 670
 icon=icon.png
+require=\TargetSquareOnLoad
