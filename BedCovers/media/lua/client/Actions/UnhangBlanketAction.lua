@@ -23,7 +23,7 @@ end
 
 function UnhangBlanketAction:perform()
     local item = InventoryItemFactory.CreateItem(self.itemType)
-    local sheetData = self.item:getModData().movableData ~= nil and self.item:getModData().movableData.bedcoverData
+    local sheetData = self.item:getModData().movableData ~= nil and self.item:getModData().movableData.bedcoverData or nil
     local itemData = item:getModData()
     if sheetData ~= nil then
         sheetData.openOverlay = nil
