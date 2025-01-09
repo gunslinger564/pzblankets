@@ -5,10 +5,16 @@ local SpriteUtil = {}
 ---@param bedcoverData table
 function SpriteUtil.addPattern(isoObject,spriteName,bedcoverData)
     local colour = bedcoverData.colourName ~= nil and BlanketObjects.OverlayColours[bedcoverData.colourName] or nil
+  
     if colour ~= nil then
-        isoObject:setOverlaySprite(spriteName,colour.r,colour.g,colour.b,0.5,true) ---fixme test
+        local colorInfo = ColorInfo.new(colour.r,colour.g,colour.b,0.5)
+     --   isoObject:setOverlaySprite(spriteName,colour.r,colour.g,colour.b,0.5,true) ---fixme test
+        local newSprite = getSpriteManager(spriteName):AddSprite(spriteName)
+        newSprite:setName(spriteName)
+        newSprite:setTintMod(colorInfo)
+        isoObject:addAttachedAnimSprite(newSprite)
     else
-        isoObject:setOverlaySprite(spriteName,true)
+        isoObject:addAttachedAnimSpriteByName(spriteName)
     end
     if not isoObject:getModData().movableData then isoObject:getModData().movableData = {} end
     isoObject:getModData().movableData.bedcoverData = bedcoverData
@@ -18,9 +24,22 @@ end
 ---@param isoObject IsoObject
 function SpriteUtil.removePattern(isoObject)
     if isoObject:getModData().movableData ~= nil and isoObject:getModData().movableData.bedcoverData ~= nil then
-        isoObject:setOverlaySprite(nil)
-        isoObject:getModData().movableData.bedcoverData = nil
-        isoObject:transmitModData()
+        
+        
+        local sprites = isoObject:getAttachedAnimSprite()
+        local index
+        for i=0, sprites:size()-1 do
+            if string.find(sprites:get(i),"pattern")then
+                index = i
+                break
+            end
+        end
+        if index then 
+            isoObject:RemoveAttachedAnim(index)
+        -- isoObject:setOverlaySprite(nil)
+            isoObject:getModData().movableData.bedcoverData = nil
+            isoObject:transmitModData()
+        end
     end
 end
 
@@ -31,11 +50,14 @@ end
 function SpriteUtil.getSpriteForFacing(sprite,curFacing,targetFacing)
     if curFacing == targetFacing then return sprite end
     local offset = sprite:getProperties():Val(targetFacing .. "offset") or sprite:getProperties():Val(tostring(IsoDirections.reverse(IsoDirections[targetFacing])) .. "offset")
+
+    ---print(sprite:getName():gsub("%d+$",function(s) return s + offset end))
+
     if offset ~= nil then
         return getSprite(sprite:getName():gsub("%d+$",function(s) return s + offset end))
     else
         print(string.format("BedCovers: sprite %s has no matching facing for %s",tostring(sprite:getName()),tostring(targetFacing)))
-        return sprite
+       return sprite
     end
 end
 

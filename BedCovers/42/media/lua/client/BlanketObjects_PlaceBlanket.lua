@@ -15,7 +15,10 @@ function BO.placeBedSheet(character,bed,bedSheet,tileset)
 		local patternGrid = BlanketObjects.SpriteUtil.getMatchingSpriteGridForData(bed,bedSheetItem:getModData())
 		for i = 0, objects:size()- 1 do
 			local obj = objects:get(i)
-			obj:setSprite(getSprite((obj:getTextureName():gsub("furniture_bedding_01",tileset,1))))
+			local newName = obj:getTextureName():gsub("furniture_bedding_01",tileset,1)
+			local newSprite = getSprite(newName)
+			obj:addAttachedAnimSprite(newSprite)
+			--obj:setSprite(getSprite((obj:getTextureName():gsub("furniture_bedding_01",tileset,1))))
 			if patternGrid ~= nil then
 				BlanketObjects.SpriteUtil.addPattern(obj,patternGrid:getSpriteFromIndex(i):getName(),bedSheetItem:getModData().movableData.bedcoverData)
 			end
@@ -39,7 +42,8 @@ function BO.removeBedSheet(character,bed,tileset,item)
 	bed:getSpriteGridObjects(objects)
 	for i = 0, objects:size()- 1 do
 		local obj = objects:get(i)
-		obj:setSprite(getSprite((obj:getTextureName():gsub(tileset,"furniture_bedding_01",1))))
+		obj:clearAttachedAnimSprite()
+		--obj:setSprite(getSprite((obj:getTextureName():gsub(tileset,"furniture_bedding_01",1))))
 		BlanketObjects.SpriteUtil.removePattern(obj)
 		obj:transmitUpdatedSpriteToServer()
 	end
