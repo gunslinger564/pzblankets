@@ -1,0 +1,83 @@
+The .pngs in this folder are arranged in order to line up with the vanilla beds.
+
+To make your own blanket use one of the images as a template and draw over each sprite.
+
+My suggestion is to piece together the ones that belong to the same bed as a single layer then stretch the image you want over that and cut out each tile by lining up the sinlge pieces with the one large piece. 
+
+The original spritesheet for this is called "furniture_bedding_01"
+It will be located in the TileZed 2x tile folder and is good for reference and also visually seeing how the blankets will look.
+
+After you finish your spritesheet you need to create a mod folder structure, there is information for this on the pz wiki https://pzwiki.net/wiki/Mod_structure
+
+Then create and add new tileproperties and .pack files. There is also a page on the wiki for this
+https://pzwiki.net/wiki/Adding_new_tiles
+
+You should look at my tile properties file and you can copy the properties over to yours.
+
+Once you have all of this set up and your 2 tiles files in your mod, then you need to make sure your item scripts are set up right.
+You can copy my item scripts and rename them. you just need to remember your item name
+
+Take your item name (with module name Base or otherwise) and it needs to be added to a lookup table that points to its sprite name.
+
+here is what that table looks like 
+
+BlanketObjects.TilesInfo = {
+--full item name		--spriteSheetname
+    ["Blankets.BlackBlanket"] = "bedding_black",
+	--etc.
+}
+
+
+make a lua file in your shared folder and make it like this
+
+BlanketObjects.TilesInfo = BlanketObjects.TilesInfo or {}
+
+local myTilesInfo = {
+["Base.myItemName"] = "MySpriteSheetName",
+["etc"] = "etc",
+}
+
+for i,v in pairs(myTilesInfo)do
+BlanketObjects.TilesInfo[i] = v
+end
+
+
+note that MySpriteSheetName is the name of the spritesheet .png you made when it was packed
+
+another note if you include a color name in the blanket name it should tie into the blanket dyeing code
+
+if you want to have pattern overlays it gets a bit more complicated
+
+BlanketObjects.PatternsInfo = {
+    SkullPattern = {
+        colourRolls = {
+            Red = 20, --chances of it being this color
+            Purple = 20,
+            Yellow = 10,
+            Black = 20,
+            PaintTurquoise = 20,
+            None = 10,
+        },
+        lFancy      = "bedding_skull_pattern_4", --types of beds and first coresponding sprite that it goes on
+        lModern     = "bedding_skull_pattern_16",
+        lOak        = "bedding_skull_pattern_40",
+        sBlue       = "bedding_skull_pattern_8",
+        sFancy      = "bedding_skull_pattern_0",
+        sHospital   = "bedding_skull_pattern_64",
+        sSimple     = "bedding_skull_pattern_32",
+    },
+}
+just do the same as before, please do not overwrite my tables!!!
+
+Lastly if you want your blanket items to appear in the world you need to add it to the distributions table
+https://pzwiki.net/wiki/Procedural_distributions
+
+
+
+
+
+
+
+
+
+
